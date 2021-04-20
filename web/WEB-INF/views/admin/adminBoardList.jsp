@@ -73,7 +73,7 @@
 							class="list-group-item text-center">
 							<h4 class="glyphicon glyphicon"></h4>
 							<br />미응답 Q&A 관리
-						</a> <a href="${ pageContext.servletContext.contextPath }/admin/member/list"
+						</a> <a href="${ pageContext.servletContext.contextPath }/hp/report/count/list"
 							class="list-group-item text-center">
 							<h4 class="glyphicon"></h4>
 							<br />회원 관리

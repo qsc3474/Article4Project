@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>관리자페이지</title>
 
  <!-- Meta Data -->
    <meta charset="utf-8">
@@ -49,7 +49,7 @@
 <jsp:include page="../common/header.jsp"></jsp:include>
 <section class="step-title pt-null">
          <div class="section-title text-center" data-wow-duration="1000ms" data-wow-delay="0.3s">
-            <h2>예약 조회</h2>
+            <h2>신고 관리</h2>
          </div>
       </section>
 
@@ -64,7 +64,7 @@
 							<h4 class="glyphicon glyphicon"></h4>
 							<br />예약관리
 						</a> <a
-							href="${ pageContext.servletContext.contextPath }/admin/board"
+							href="${ pageContext.servletContext.contextPath}/admin/board"
 							class="list-group-item text-center">
 							<h4 class="glyphicon glyphicon"></h4>
 							<br />관리자 게시판 관리
@@ -98,33 +98,23 @@
 											<thead>
                                                             <tr>
                                                                 
-                                                                <th>글 번호</th>                                    
+                                                                <th>신고글 번호</th>                                    
                                                                 <th>제목</th>
-                                                                <th>내용</th>
-                                                                <th>작성일</th>                                    
-                                                                <th>작성자번호</th>                                    
+                                                                <th>신고 갯수</th>
+                                                                                                    
                                                               
                                                             </tr>
                                                         </thead>
                                                         <tbody>
                                                         
-                                                       <c:forEach var="book" items="${requestScope.allBookList }">                                                           <tr>
+                                                         <c:forEach var="report" items="${requestScope.reportCountList }">                                                           <tr>
                                                               
                                                                
-                                                                <td><c:out  value="${book.no }"/></td>
-                                                                <td><c:out value="${book.memberNo }"/></td>
-                                                                <td><c:out value="${book.time }"/></td>
-                                                                <td><c:out value="${book.petKind }"/></td>
-                                                                <td><c:out value="${book.petName }"/></td>
-                                                                <td><c:out value="${book.petAge }"/> </td>                                   
-                                                                <td><c:out value="${book.petNeut }"/></td>
-                                                                <td><c:out value="${book.message }"/></td>
-                                                                <td><c:out value="${book.status }"/></td>
-                                                                <td>
-                                                                    <input type="hidden"  name="no" value="${book.no }" >                                          
-                                                                    <button type="submit" class="btn btn-primary btn-sm" title="Edit" ><i class="fa fa-edit"></i></button>
-                                                                    <button type="button" class="btn btn-danger btn-sm deleteBtn" title="Delete" id="deleteBook"><i class="fa fa-trash-o" > </i></button>
-                                                                </td>
+                                                                <td><c:out  value="${report.reportedBoardNo }"/></td>
+                                                                <td><c:out value="${report.reportedBoard.title }"/></td>
+                                                                <td><c:out value="${report.count }"/></td>
+                                                                
+                                                                
                                                             </tr>
                                                             <tr>
                                                             

@@ -61,13 +61,13 @@ public class HPReportCountSelectListSevlet extends HttpServlet {
 		
 		if(!reportCountList.isEmpty()) {
 			
-			path = "/WEB-INF/views/board/boardFAQ.jsp";
+			path = "/WEB-INF/views/admin/reportList.jsp";
 			request.setAttribute("reportCountList", reportCountList);
 			request.setAttribute("pageInfo", pageInfo);
 			
 		} else {
 			
-			path = "/WEB-INF/views/board/boardFAQ.jsp";
+			path = "/WEB-INF/views/reportList.jsp";
 			request.setAttribute("reportCountList", reportCountList);
 			request.setAttribute("pageInfo", pageInfo);
 			
