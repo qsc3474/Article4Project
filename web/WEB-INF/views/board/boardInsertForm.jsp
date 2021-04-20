@@ -32,7 +32,7 @@
 	<!-- /title -->
 	<section>
 		<div class="container">
-			<div class="container" role="main">
+			<div role="main">
 				<form name="form" id="form" role="form"
 					action="${ pageContext.servletContext.contextPath }/hp/board/insert"
 					method="post">
@@ -72,24 +72,26 @@
 						<textarea class="form-control" rows="5" name="content"
 							id="content" placeholder="내용을 입력해 주세요"></textarea>
 					</div>
-					<div class="mb-12" id="fileUploadDiv">
-						<label for="content">업로드</label>
-						<div class="input-group" style="margin-top: 20px;">
+					<div class="mb-12" id="fileUploadDiv" style="background: #fff; margin-top: 10px;">
+						<label for="content" style="margin-top: 10px;">사진 업로드</label>
+						<div class="input-group" style="margin-top: 10px; background:#eee;" >
 							<c:if test="${ requestScope.categoryNo eq 'HP_NTC' }">
 								<label for="tag" class="input-group-text" for="inputGroupFile">파일</label>
 								<input type="file" class="form-control" name="inputGroupFile" id="inputGroupFile" >
 							</c:if>
 							<c:if test="${ requestScope.categoryNo eq 'HP_RV' }">
-								<label for="tag" class="input-group-text" for="thumbnailFile">썸네일</label>
-								<input type="file" class="form-control" name="thumbnailFile" id="thumbnailFile" >
-								<label for="tag" class="input-group-text" for="inputGroupPicture">사진</label>
-								<input type="file" class="form-control" name="inputGroupPicture" id="inputGroupPicture" >
+								<label for="tag" class="mb-12" for="thumbnailFile" style="padding-top:10px">썸네일</label>
+								<input type="file" name="thumbnailFile" id="thumbnailFile" class="mb-12 bg-white"  >
+								<div class="cf"></div>
+								<label for="tag"  for="inputGroupPicture" style="margin-top:10px;">사진</label>
+								<input type="file" name="inputGroupPicture" id="inputGroupPicture" class="bg-white" style="margin-bottom:15px">
 							</c:if>
 						</div>
 					</div>
+					
 					<div class="text-center" style="margin-top: 20px;">
-						<button type="button" class="btn btn-primary btn-lg" id="btnSave">저장</button>
-						<button type="button" class="btn btn-secondary btn-lg"
+						<button type="button" class="gp-btn btn-dark" id="btnSave">저장</button>
+						<button type="button" class="gp-btn btn-primary"
 							id="btnList">목록</button>
 					</div>
 				</form>

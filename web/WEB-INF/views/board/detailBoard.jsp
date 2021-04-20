@@ -254,7 +254,7 @@ tbody {
 				<div class="mb-12">
 					<form
 						action="${ pageContext.servletContext.contextPath }/hp/board/report"
-						method="post" id="reportForm" name="reportForm">
+						method="POST" id="reportForm" name="reportForm">
 						<label for="title">신고사유</label> <select
 							class="custom-select mr-sm-2" name="reportCategory"
 							id="reportCategory" onchange="reportCategoryChanged(this.value)">

@@ -35,6 +35,9 @@
 <script src="/creation/resources/js/event.js"></script>
  <style>
 html {background: #f8f8f8;}
+thead {
+	border-top: 2px solid #FDC647 !important;
+}
  </style>
 </head>
 <body>

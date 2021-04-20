@@ -53,57 +53,49 @@
          </div>
       </section>
 
-      <section id="reviewdetail">
-         <div class="notice-sec">
-            <div class="row">
-               <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 bhoechie-tab-menu">
-                  <div class="list-group">
-                     <a href="#" class="list-group-item active text-center">
-                        <h4 class="glyphicon glyphicon"></h4><br />예약관리
-                     </a>
-                     <a href="#" class="list-group-item text-center">
-                        <h4 class="glyphicon glyphicon"></h4><br />관리자 게시판 관리
-                     </a>
-                     <a href="#" class="list-group-item text-center">
-                        <h4 class="glyphicon glyphicon"></h4><br />Q&A 관리
-                     </a>
-                     <a href="#" class="list-group-item text-center">
-                        <h4 class="glyphicon"></h4><br />리뷰 관리
-                     </a>
-                     <a href="${ pageContext.servletContext.contextPath }/admin/member/list" class="list-group-item text-center">
-                        <h4 class="glyphicon "></h4><br /> 회원관리
-                     </a>
-                  </div>
-               </div>
-               <div class="col-md-9 bhoechie-tab-container mt-null">
-                  <div class="col-md-12 bhoechie-tab">
-                     <!-- flight section -->
-                     <div class="bhoechie-tab-content active col-md-12">
-                        <div>
-                           <div class="col-lg-12">
-                                        <div class="card">
-                                            <div class="card-header">
-                                                <h3 class="card-title hide">비공개 QnA글</h3>
-                                                <div class="card-options">
-                                                    <a href="#" class="card-options-collapse" data-toggle="card-collapse"><i class="fe fe-chevron-up"></i></a>
-                                                    <a href="#" class="card-options-fullscreen" data-toggle="card-fullscreen"><i class="fe fe-maximize"></i></a>
-                                                    <a href="#" class="card-options-remove" data-toggle="card-remove"><i class="fe fe-x"></i></a>
-                                                    <div class="item-action dropdown ml-2">
-                                                        <a href="javascript:void(0)" data-toggle="dropdown"><i class="fe fe-more-vertical"></i></a>
-                                                        <div class="dropdown-menu dropdown-menu-right vivify popIn">
-                                                            <a href="javascript:void(0)" class="dropdown-item"><i class="dropdown-icon fe fe-tag"></i> Action </a>
-                                                            <a href="javascript:void(0)" class="dropdown-item"><i class="dropdown-icon fe fe-edit-2"></i> Another action </a>
-                                                            <a href="javascript:void(0)" class="dropdown-item"><i class="dropdown-icon fe fe-message-square"></i> Something else here</a>
-                                                            <div class="dropdown-divider"></div>
-                                                            <a href="javascript:void(0)" class="dropdown-item"><i class="dropdown-icon fe fe-link"></i> Separated link</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="card-body">
-                                                <div class="table-responsive table_e2">
-                                                    <table class="table table-hover table-vcenter text-nowrap mb-0">
-                                                        <thead>
+      <section class="notice-sec">
+		<div class="container">
+			<div class="col-lg-2">
+				<div class="page-submenu">
+					<div class="list-group">
+						<a
+							href="${ pageContext.servletContext.contextPath }/hp/notice/select/list"
+							class="list-group-item active text-center">
+							<h4 class="glyphicon glyphicon"></h4>
+							<br />예약관리
+						</a> <a
+							href="${ pageContext.servletContext.contextPath }/hp/notice/select/list"
+							class="list-group-item text-center">
+							<h4 class="glyphicon glyphicon"></h4>
+							<br />관리자 게시판 관리
+						</a> <a
+							href="${ pageContext.servletContext.contextPath }/hp/notice/select/list"
+							class="list-group-item text-center">
+							<h4 class="glyphicon glyphicon"></h4>
+							<br />Q&A 관리
+						</a> <a href="${ pageContext.servletContext.contextPath }/hp/dental"
+							class="list-group-item text-center">
+							<h4 class="glyphicon"></h4>
+							<br />리뷰 관리
+						</a> <a
+							href="${ pageContext.servletContext.contextPath }/admin/member/list"
+							class="list-group-item text-center">
+							<h4 class="glyphicon "></h4>
+							<br /> 회원관리
+						</a>
+					</div>
+				</div>
+				</div>
+               <div class="col-lg-10">
+					<div id="page-wrapper">
+						<div id="page-inner">
+							<div class="row">
+								<div class="col-md-12">
+									<div class="panel panel-default panel-wrap">
+										<table class="table table-hover table-bordered"
+											id="dataTables-example"
+											aria-describedby="dataTables-example_info">
+											<thead>
                                                             <tr>
                                                                 
                                                                 <th>글 번호</th>                                    
@@ -134,33 +126,12 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
                         </div>
-                     </div>
+                    </div>
+                </div>
                     
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-            
-         <script>
-        
-         
-            $(document).ready(function () {
-               $("div.bhoechie-tab-menu>div.list-group>a").click(function (e) {
-                  e.preventDefault();
-                  $(this).siblings('a.active').removeClass("active");
-                  $(this).addClass("active");
-                  var index = $(this).index();
-                  $("div.bhoechie-tab>div.bhoechie-tab-content").removeClass("active");
-                  $("div.bhoechie-tab>div.bhoechie-tab-content").eq(index).addClass("active");
-               });
-            });
-            
-           
-         </script>
-         
-    
+        </div>
+        <!-- container -->
       </section>
 
 </body>

@@ -24,8 +24,8 @@ html{background: #f8f8f8;}
 .panel-body {
     background-color: #fff!important;
 }
-.top-buttom {float:right; margin-top: -40px; margin-right:30px;}
-.update-buttom {margin-right:10px; margin-top: 20px; padding:7px 15px; float: right;}
+.top-buttom {float:right; margin-top: -50px; margin-right:20px;}
+.update-buttom {margin-right:10px; margin-top: 20px; padding:7px 15px;}
 </style>
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
