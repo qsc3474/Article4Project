@@ -53,7 +53,7 @@
                                             <label for="#">비밀번호</label>
                                         </div>
                                         <div class="form-group col-sm-7">
-                                            <input type="password" class="form-control" placeholder="비밀번호" name="pwd">
+                                            <input type="password" class="form-control" placeholder="비밀번호" name="pwd" id="password">
                                         </div>
                                         <!--/.form-group -->
                                     </div>
@@ -62,7 +62,7 @@
                                             <label for="#">비밀번호확인</label>
                                         </div>
                                         <div class="form-group col-sm-7">
-                                            <input type="password" class="form-control" placeholder="비밀번호확인">
+                                            <input type="password" class="form-control" placeholder="비밀번호확인" id="checkPassword">
                                         </div>
                                     </div>
                                     <div class="col-sm-12 pr-10">
@@ -189,6 +189,15 @@
 			if(!passwordValue || passwordValue === "") {	// 사용자가 비번을 입력하지 않았을 때
 				alert("비밀번호는 반드시 입력해야 합니다.");
 				document.getElemetsByName("pwd")[0].focus();
+				
+				return false;
+			}else if(document.getElementById("password").value != document.getElementById("checkPassword").value){
+				
+				alert("비밀번호 재확인이 일치하지 않습니다.");
+				document.getElementById("password").focus();
+			 
+				return false;
+
 			}
 			
 			requestPath = "<%=request.getContextPath()%>";

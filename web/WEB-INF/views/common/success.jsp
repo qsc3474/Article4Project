@@ -105,6 +105,12 @@
 				successMessage = "후기게시판 파일업로드에 성공하셨습니다!";
 				movePath = "${ pageContext.servletContext.contextPath }/hp/review/select/list";
 				break;
+				
+			/* 신고 */
+			case "boardReport" :
+				successMessage = "게시물 신고에 성공하셨습니다!";
+				movePath = "${ pageContext.servletContext.contextPath }/hp/review/select/list";
+				break;
 			}
 			
 			alert(successMessage);
