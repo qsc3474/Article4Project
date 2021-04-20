@@ -234,5 +234,42 @@ public class AdminDAO {
 		
 		return nonAnswerQnaList;
 	}
+	public List<HPBoardDTO> adminBoardList(Connection con) {
+		Statement stmt= null;
+		ResultSet rset= null;
+		
+		List<HPBoardDTO> adminBoardList= null;
+		String query= prop.getProperty("selectAdminBorad");
+
+		try {
+			stmt =con.createStatement();
+			rset=stmt.executeQuery(query);
+			
+			adminBoardList = new ArrayList<>();
+			
+			while(rset.next()) {
+				HPBoardDTO board = new HPBoardDTO();
+				board.setWriter(new MemberDTO());
+				board.setNo(rset.getInt("HP_BD_NO"));
+				board.setTitle(rset.getString("HP_BD_CATEGORY_NO"));
+				board.setTitle(rset.getString("HP_BD_TITLE"));
+				board.setDrawupDate(rset.getDate("HP_BD_DRAWUP_DATE"));
+				board.setWatched(rset.getInt("HP_BD_WATCHED"));
+				board.getWriter().setNo(rset.getInt("HP_MEM_NO"));
+
+				
+				adminBoardList.add(board);
+				
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		finally {
+			close(rset);
+			close(stmt);
+		}
+		return adminBoardList;
+	}
 
 }

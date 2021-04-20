@@ -13,23 +13,27 @@ import creation.admin.model.service.AdminService;
 import creation.board.model.dto.HPBoardDTO;
 
 /**
- * Servlet implementation class AdminPrivateQnaListServlet
+ * Servlet implementation class AdminBoardServlet
  */
-@WebServlet("/admin/Qna/private")
-public class AdminPrivateQnaListServlet extends HttpServlet {
+@WebServlet("/admin/board")
+public class AdminBoardServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	
 		AdminService admin = new AdminService();
-		List<HPBoardDTO> privateQnaList= admin.selectPrivateQnaList();
+		List<HPBoardDTO> adminBoardList= admin.adminBoardList();
 		String path = "";
 
-		System.out.println(privateQnaList);
+		System.out.println(adminBoardList);
 		
-		if(!privateQnaList.isEmpty()) {
-			path="/WEB-INF/views/admin/adminPrivateQnA.jsp";
-			request.setAttribute("privateQnaList", privateQnaList);
+		if(!adminBoardList.isEmpty()) {
+			path="/WEB-INF/views/admin/adminBoardList.jsp";
+			request.setAttribute("adminBoardList", adminBoardList);
+		}else {
+			path="/WEB-INF/views/admin/adminBoardList.jsp";
+			request.setAttribute("adminBoardList", adminBoardList);
 		}
 		
 
@@ -37,7 +41,5 @@ public class AdminPrivateQnaListServlet extends HttpServlet {
 		request.getRequestDispatcher(path).forward(request, response);
 		
 	}
-
-	
 
 }

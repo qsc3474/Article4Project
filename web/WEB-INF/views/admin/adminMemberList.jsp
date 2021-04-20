@@ -87,7 +87,7 @@ div.bhoechie-tab-menu div.list-group>a.active, div.bhoechie-tab-menu div.list-gr
 	<section class="step-title pt-null">
 		<div class="section-title text-center" data-wow-duration="1000ms"
 			data-wow-delay="0.3s">
-			<h2>관리자 페이지</h2>
+			<h2>회원 조회</h2>
 		</div>
 	</section>
 
@@ -96,25 +96,30 @@ div.bhoechie-tab-menu div.list-group>a.active, div.bhoechie-tab-menu div.list-gr
 			<div class="col-lg-2">
 				<div class="page-submenu">
 					<div class="list-group">
-						<a
-							href="${ pageContext.servletContext.contextPath }/hp/notice/select/list"
+					<a
+							href="${ pageContext.servletContext.contextPath }/admin/book/List"
 							class="list-group-item active text-center">
-							<h4 class="glyphicon glyphicon"></h4> <br />예약관리
+							<h4 class="glyphicon glyphicon"></h4>
+							<br />예약관리
 						</a> <a
-							href="${ pageContext.servletContext.contextPath }/hp/notice/select/list"
+							href="${ pageContext.servletContext.contextPath }/admin/board"
 							class="list-group-item text-center">
-							<h4 class="glyphicon glyphicon"></h4> <br />관리자 게시판 관리
+							<h4 class="glyphicon glyphicon"></h4>
+							<br />관리자 게시판 관리
 						</a> <a
-							href="${ pageContext.servletContext.contextPath }/hp/notice/select/list"
+							href="${ pageContext.servletContext.contextPath }/admin/nonAnswer/qna"
 							class="list-group-item text-center">
-							<h4 class="glyphicon glyphicon"></h4> <br />Q&A 관리
-						</a> <a href="${ pageContext.servletContext.contextPath }/hp/dental"
+							<h4 class="glyphicon glyphicon"></h4>
+							<br />미응답 Q&A 관리
+						</a> <a href="${ pageContext.servletContext.contextPath }/admin/member/list"
 							class="list-group-item text-center">
-							<h4 class="glyphicon"></h4> <br />리뷰 관리
+							<h4 class="glyphicon"></h4>
+							<br />회원 관리
 						</a> <a
 							href="${ pageContext.servletContext.contextPath }/admin/member/list"
 							class="list-group-item text-center">
-							<h4 class="glyphicon "></h4> <br /> 회원관리
+							<h4 class="glyphicon "></h4>
+							<br /> 신고 관리
 						</a>
 					</div>
 				</div>

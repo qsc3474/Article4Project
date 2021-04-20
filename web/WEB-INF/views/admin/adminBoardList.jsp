@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>관리자페이지</title>
+<title>Insert title here</title>
 
  <!-- Meta Data -->
    <meta charset="utf-8">
@@ -49,7 +49,7 @@
 <jsp:include page="../common/header.jsp"></jsp:include>
 <section class="step-title pt-null">
          <div class="section-title text-center" data-wow-duration="1000ms" data-wow-delay="0.3s">
-            <h2>미응답 QnA 조회</h2>
+            <h2>관리자 게시판</h2>
          </div>
       </section>
 
@@ -64,7 +64,7 @@
 							<h4 class="glyphicon glyphicon"></h4>
 							<br />예약관리
 						</a> <a
-							href="${ pageContext.servletContext.contextPath}/admin/board"
+							href="${ pageContext.servletContext.contextPath} /admin/board"
 							class="list-group-item text-center">
 							<h4 class="glyphicon glyphicon"></h4>
 							<br />관리자 게시판 관리
@@ -100,7 +100,7 @@
                                                                 
                                                                 <th>글 번호</th>                                    
                                                                 <th>제목</th>
-                                                                <th>카테고리</th>
+                                                                <th>내용</th>
                                                                 <th>작성일</th>                                    
                                                                 <th>작성자번호</th>                                    
                                                               
@@ -108,14 +108,14 @@
                                                         </thead>
                                                         <tbody>
                                                         
-                                                         <c:forEach var="non" items="${requestScope.nonAnswerQnaList }">                                                           <tr>
+                                                         <c:forEach var="bd" items="${requestScope.adminBoardList }">                                                           <tr>
                                                               
                                                                
-                                                                <td><c:out  value="${non.no }"/></td>
-                                                                <td><c:out value="${non.title }"/></td>
-                                                                <td><c:out value="${non.categoryNo }"/></td>
-                                                                <td><c:out value="${non.drawupDate }"/></td>
-                                                                <td><c:out value="${non.writer.no }"/></td>
+                                                                <td><c:out  value="${bd.no }"/></td>
+                                                                <td><c:out value="${bd.title }"/></td>
+                                                                <td><c:out value="${bd.content }"/></td>
+                                                                <td><c:out value="${bd.drawupDate }"/></td>
+                                                                <td><c:out value="${bd.writer.no }"/></td>
                                                                 
                                                             </tr>
                                                             <tr>

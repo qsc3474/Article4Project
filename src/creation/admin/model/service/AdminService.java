@@ -127,4 +127,20 @@ private final AdminDAO adminDAO;
 		return nonAnswerQnaList;
 	}
 
+
+	public List<HPBoardDTO> adminBoardList() {
+		Connection con =getConnection();
+		
+		List<HPBoardDTO> adminBoardList = null;
+		
+		adminBoardList = adminDAO.adminBoardList(con);
+		if(adminBoardList !=null) {
+			commit(con);
+		}else {
+			rollback(con);
+		}
+		close(con);
+		return adminBoardList;
+	}
+
 }

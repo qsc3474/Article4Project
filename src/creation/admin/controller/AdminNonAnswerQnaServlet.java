@@ -30,6 +30,9 @@ public class AdminNonAnswerQnaServlet extends HttpServlet {
 		if(!nonAnswerQnaList.isEmpty()) {
 			path="/WEB-INF/views/admin/adminNonAnswerQna.jsp";
 			request.setAttribute("nonAnswerQnaList", nonAnswerQnaList);
+		}else {
+			path="/WEB-INF/views/admin/adminNonAnswerQna.jsp";
+			request.setAttribute("nonAnswerQnaList", nonAnswerQnaList);
 		}
 		
 
