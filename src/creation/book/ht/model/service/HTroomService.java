@@ -7,7 +7,6 @@ import static creation.common.jdbc.JDBCTemplate.rollback;
 
 import java.sql.Connection;
 import java.util.List;
-
 import creation.book.ht.model.dao.HTroomDTO;
 import creation.book.ht.model.dto.HTroomDAO;
 
@@ -53,6 +52,22 @@ public class HTroomService {
 		}
 		close(con);
 		return roomList;
+	}
+	public HTroomDTO selectRoomDetail(int no) {
+		Connection con = getConnection();
+		HTroomDTO roomDetail = null;
+		
+		roomDetail = htRoomDAO.selectRoomDetail(con, no);
+		
+		
+			if(roomDetail != null) {
+				commit(con);
+			} else {
+				rollback(con);
+			}
+		close(con);
+		
+		return roomDetail;
 	}
 
 }

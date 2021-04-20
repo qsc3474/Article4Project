@@ -124,7 +124,7 @@ const link = "${ pageContext.servletContext.contextPath }/ht/room/list";
 			for(var i = 0 ; i < $tds.length ; i++) {
 				$tds[i].onclick = function() {
 					const no = this.parentNode.children[0].innerText;
-					/* location.href = "${ pageContext.servletContext.contextPath }/ht/NTC/notice/detail?no=" + no; */   
+					 location.href = "${ pageContext.servletContext.contextPath }/ht/room/detail?no=" + no;    
 				}
 			}
 		}
