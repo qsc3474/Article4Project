@@ -100,7 +100,6 @@
 												 <option value="0" selected>중성화여부를 선택해주세요.</option>	
                                                   <option value="Y">O</option>
                                                   <option value="N">X</option>
-                                                 <option value=" ">모름</option>
                                                   
                                               </select> 
                                             <label for="exampleFormControlTextarea1">특이사항</label>
@@ -204,7 +203,7 @@
                                         </div>    
                                     </div> 
                                     <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
-                                    <input type="submit" name="complete" class="next action-button" value="예약하기" />
+                                    <input type="button" name="complete" class="next action-button" value="Next" />
                                
                                 </fieldset>
                                 
@@ -228,7 +227,10 @@
                                                 <h5 class="purple-text text-center">You Have Successfully Booked!</h5>
                                             </div>
                                         </div>
+                                        
                                     </div>
+                                 <input type="submit" name="complete" class="next action-button" value="완료" />
+                                    
                                 </fieldset>
                                 </form>
                         </div>
