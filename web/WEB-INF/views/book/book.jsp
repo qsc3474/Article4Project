@@ -56,7 +56,7 @@
                                 <!-- progressbar -->
                                 <ul id="progressbar">
                                     <li class="active" id="account"><strong>동물정보입력</strong></li>
-                                    <li id="personal"><strong>진료 선택</strong></li>
+                                    <li id="personal"><strong>예약 시간 선택</strong></li>
                                     <li id="payment"><strong>예약정보</strong></li>
                                     <li id="confirm"><strong>완료</strong></li>
                                 </ul>
@@ -85,8 +85,8 @@
                                             <label class="fieldlabels">성별 <span class="text-danger">*</span></label> 
                                               <select name="gender" id="userPetGender" onchange="getUserPetGender()">
                                               <option value="0" selected>성별을 선택해주세요.</option>
-                                                  <option value="M">남</option>
-                                                  <option value="F">여</option>
+                                                  <option value="M">수</option>
+                                                  <option value="F">암</option>
                                               </select> 
                                                <label class="fieldlabels">나이<span class="text-danger">*</span></label>
 												 <select name="age" id="userPetAge" onchange="getUserPetAge()" >

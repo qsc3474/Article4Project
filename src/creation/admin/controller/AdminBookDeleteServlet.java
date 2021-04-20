@@ -19,7 +19,7 @@ public class AdminBookDeleteServlet extends HttpServlet {
        
    
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		int no = Integer.valueOf(request.getParameter("no")) ;	
+		int no = Integer.valueOf(request.getParameter("no"));
 		System.out.println(no);
 		int result = 0;
 		
@@ -32,17 +32,17 @@ public class AdminBookDeleteServlet extends HttpServlet {
 		System.out.println(deleteBook);
 		String path="";
 		if(result>0) {
-			response.sendRedirect( request.getServletContext().getContextPath()+"/index.jsp");
+			path = "/WEB-INF/views/common/success.jsp";
+			request.setAttribute("successCode", "deleteBook");
 		}else {
-			path="WEB-INF/view/common/failed.jsp";
+			path="/WEB-INF/view/common/failed.jsp";
 		}
 		
-		
-		}
-		
-		
+		request.getRequestDispatcher(path).forward(request, response);
 		
 	}
+	
+}
 
 	
 	

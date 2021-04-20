@@ -132,6 +132,7 @@ thead {border-top: 2px solid #FDC647 !important;}
                 </div>
           </div>          
         </div>
+<<<<<<< HEAD
        <script type="text/javascript">
               $(".deleteBtn").click(function(){
                  
@@ -145,6 +146,22 @@ thead {border-top: 2px solid #FDC647 !important;}
                 
                  
               });
+=======
+        <script type="text/javascript">
+        function deleteButtonAction(){
+            	
+            	$(".deleteBtn").click(function(){
+            		
+            		var $parent = this.parentNode;
+    			    var getNo = $parent.children[0];
+    			    var no = getNo.value;
+    			    location.href = "${pageContext.request.contextPath}/admin/book/delete?no=" + no;
+    			    
+            		
+            	})
+            	
+            }
+>>>>>>> refs/remotes/origin/master
         </script>
 
         <!-- container -->

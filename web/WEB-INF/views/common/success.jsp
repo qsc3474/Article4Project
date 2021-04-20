@@ -111,6 +111,16 @@
 				successMessage = "게시물 신고에 성공하셨습니다!";
 				movePath = "${ pageContext.servletContext.contextPath }/hp/review/select/list";
 				break;
+				
+			/* 관리자 */
+			case "deleteBook" :
+				successMessage = "예약 취소에 성공하셨습니다!";
+				movePath = "${ pageContext.servletContext.contextPath }/admin/book/List";
+				break;
+			case "updateBook" :
+				successMessage = "예약 수정에 성공하셨습니다!";
+				movePath = "${ pageContext.servletContext.contextPath }/admin/book/List";
+				break;
 			}
 			
 			alert(successMessage);

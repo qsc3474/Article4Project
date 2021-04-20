@@ -33,10 +33,13 @@ public class AdminBookUpdateServelet extends HttpServlet {
 	System.out.println(updateBook);
 	String path="";
 	if(result>0) {
-		response.sendRedirect( request.getServletContext().getContextPath()+"/index.jsp");
+		path = "/WEB-INF/views/common/success.jsp";
+		request.setAttribute("successCode", "updateBook");
 	}else {
-		path="WEB-INF/view/common/failed.jsp";
+		path="/WEB-INF/view/common/failed.jsp";
 	}
+	
+	request.getRequestDispatcher(path).forward(request, response);
 	
 	
 	}
