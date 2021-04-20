@@ -89,4 +89,10 @@ WHERE MEM_ID=?
     SET MEM_PWD =?
   WHERE MEM_NO=?	
 	</entry>
+	<entry key="checkIdOverlap">
+	    SELECT
+	           A.MEM_ID
+	      FROM MEM_INFO A
+	     WHERE A.MEM_ID = ?
+	</entry>
 </properties>

@@ -106,46 +106,15 @@ private final MemberDAO memberDAO;
 		return result;	
 	}
 
-	
-
-	public MemberDTO memberId(MemberDTO mem) {
+	public int checkIdOverlap(String id) {
+		
 		Connection con = getConnection();
 		
-		MemberDTO memberId = memberDAO.memberId(con, mem);
-		System.out.println(memberId);
+		int result = memberDAO.checkIdOverlap(con, id);
 		
-		close(con);
-		return memberId;	
-	}
-
-	public MemberDTO memberpwd(MemberDTO mem) {
-		Connection con = getConnection();
+		return result;
 		
-		MemberDTO memberPwd = memberDAO.memberPwd(con, mem);
-		System.out.println(memberPwd);
-		
-		close(con);
-		return memberPwd;
-	}
-
-	public int pwdUpdate(MemberDTO mem) {
-		Connection con = getConnection();
-		
-		int result = memberDAO.pwdUpdate(con, mem);
-		
-		if(result > 0) {
-			
-			commit(con);
-			
-		} else {
-			
-			rollback(con);
-			
-		}
-		
-		return result;	
-	}		
 	}
 
 
-
+}

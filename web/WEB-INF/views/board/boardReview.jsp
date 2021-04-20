@@ -6,12 +6,6 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-
-<style>
-td{vertical-align: middle !important;}
-thead{border-top: 2px solid #FDC647 !important;}
-</style>
-
 </head>
 <body id="home-version-1"
 	class="home-version-1 sticky-header transparent-header menu-two"
@@ -22,7 +16,9 @@ thead{border-top: 2px solid #FDC647 !important;}
 		<div class="section-title ht-title text-center"
 			data-wow-duration="1000ms" data-wow-delay="0.3s">
 			<h2>호텔 이용후기</h2>
-			<h3 class="text-center pb"><span class="underline--magical" style="font-size:24px;">베스트 후기</span> </h3>
+			<h3 class="text-center pb">
+				<span class="underline--magical">베스트 후기</span>
+			</h3>
 		</div>
 	</section>
 
@@ -68,25 +64,17 @@ thead{border-top: 2px solid #FDC647 !important;}
 		</div>
 	</section>
 
-	<section class="bg-white">
+	<section class="bg-light">
 		<div class="container">
 			<h3 class="text-center pb">
-				<span class="underline--magical"  style="font-size:24px;">후기게시판 목록</span>
+				<span class="underline--magical">후기게시판 목록</span>
 			</h3>
 			<jsp:include page="/WEB-INF/views/board/pageSubmenu.jsp"></jsp:include>
 			<div class="col-lg-10">
 				<div class="cf"></div>
 				<div class="row mb" style="padding: 0 12px;">
-					<div class="table-container inner-bordered center fc01">
-						<table border="1" class="table table-hover table-striped">
-							<colgroup>
-                                <col width="10%">
-                                <col width="15%">
-                                <col width="10%">
-                                <col width="40%">
-                                <col width="15%">
-                                <col width="10%">
-                            	</colgroup>
+					<div class="table-container deco inner-bordered center fc01">
+						<table border="1" class="table table-striped">
 							<thead>
 								<tr>
 									<th style="width: 70px;">번호</th>
@@ -160,10 +148,12 @@ thead{border-top: 2px solid #FDC647 !important;}
 					<button id="searchMaxPage">>></button>
 
 				</div>
+				<br> <br>
+
 
 				<form id="searchForm"
 					action="${ pageContext.servletContext.contextPath }/hp/info/search/list"
-					method="get" style="padding-top:20px">
+					method="get">
 					<div class="search-area" align="center">
 						<c:choose>
 							<c:when test="${ !empty requestScope.searchValue }">
@@ -187,9 +177,9 @@ thead{border-top: 2px solid #FDC647 !important;}
 								<input type="search" id="searchValue" name="searchValue">
 							</c:otherwise>
 						</c:choose>
-						<button type="submit" class="gp-btn btn-dark" style="padding:7px 15px;">검색하기</button>
+						<button type="submit">검색하기</button>
 						<c:if test="${ !empty sessionScope.loginMember }">
-							<button type="button" id="writeBoard" class="gp-btn btn-dark" style="text-align: right; padding:7px 15px;">작성하기</button>
+							<button type="button" id="writeBoard" style="text-align: right">작성하기</button>
 						</c:if>
 					</div>
 				</form>
@@ -205,7 +195,6 @@ thead{border-top: 2px solid #FDC647 !important;}
 					+ "&searchValue="
 					+ document.getElementById("searchValue").value;
 		}
-
 		if (document.getElementById("searchStartPage")) {
 			const $searchStartPage = document.getElementById("searchStartPage");
 			$searchStartPage.onclick = function() {
@@ -226,7 +215,6 @@ thead{border-top: 2px solid #FDC647 !important;}
 						+ document.getElementById("searchValue").value;
 			}
 		}
-
 		if (document.getElementById("searchPrevPage")) {
 			const $searchPrevPage = document.getElementById("searchPrevPage");
 			$searchPrevPage.onclick = function() {
@@ -253,14 +241,11 @@ thead{border-top: 2px solid #FDC647 !important;}
 		if (document.getElementsByTagName("td")) {
 			const $tds = document.getElementsByTagName("td");
 			for (var i = 0; i < $tds.length; i++) {
-
 				$tds[i].onmouseenter = function() {
 					this.parentNode.style.cursor = "pointer";
 				}
-
 				$tds[i].onmouseout = function() {
 				}
-
 				$tds[i].onclick = function() {
 					const no = this.parentNode.children[0].innerText;
 					location.href = "${ pageContext.servletContext.contextPath }/hp/review/detail?no="
@@ -268,7 +253,6 @@ thead{border-top: 2px solid #FDC647 !important;}
 				}
 			}
 		}
-
 		if (document.getElementById("writeBoard")) {
 			const $writeBoard = document.getElementById("writeBoard");
 			$writeBoard.onclick = function() {
