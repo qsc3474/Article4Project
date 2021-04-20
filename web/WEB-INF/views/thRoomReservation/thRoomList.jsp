@@ -87,7 +87,7 @@
                                                 </label>
                                             </td>
                                             <td>
-                                               <c:out value="${ htRoom.no }"/>
+                                               <input type="hidden" id="no" value="<c:out value="${ htRoom.no }"/>"> <c:out value="${ htRoom.no }"/>
                                             </td>
                                             <td>
                                                 <c:out value="${ htRoom.type }"/>
@@ -115,21 +115,22 @@
                 </div>
             </div>
         </section>
-
 <script>
 const link = "${ pageContext.servletContext.contextPath }/ht/room/list";
-
+		
+		
+		console.log(no);
+		
 		if(document.getElementsByTagName("td")) {
 			const $tds = document.getElementsByTagName("td");
 			for(var i = 0 ; i < $tds.length ; i++) {
 				$tds[i].onclick = function() {
-					const no = this.parentNode.children[0].innerText;
-					 location.href = "${ pageContext.servletContext.contextPath }/ht/room/detail?no=" + no;    
+				const no = document.getElementById("no").value;
+					 location.href = "${ pageContext.servletContext.contextPath }/ht/room/detail?no="+no;    
 				}
 			}
 		}
 </script>
-
 
 </body>
 </html>

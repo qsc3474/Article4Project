@@ -69,6 +69,11 @@
 				successMessage = "호텔 룸 예약에 성공하셨습니다!";
 				movePath = "${ pageContext.servletContext.contextPath }/ht/home"; 
 				break;
+				/* 호텔 룸 예약 취소  */
+			case "thRoomDelete" :
+				successMessage = "호텔 룸 취소에 성공하셨습니다!";
+				movePath = "${ pageContext.servletContext.contextPath }/ht/home"; 
+				break;
 			}
 			
 			alert(successMessage);

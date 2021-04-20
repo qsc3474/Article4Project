@@ -35,6 +35,7 @@
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css'>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="/creation/resources/js/event.js"></script>
 
 </head>
 <body>
@@ -51,8 +52,8 @@
                 <div class="row justify-content-center">
                     <div class="col-11 col-sm-10 col-md-10 col-lg-6 col-xl-5 text-center p-0 mt-3 mb-2">
                         <div class="card px-0 pt-4 pb-0 mt-3 mb-3">
-                            <form id="msform" action="${pageContext.request.contextPath}/ht/room/detail" method="POST">
-		                       	<input type="hidden" name="roomNO" value="${requestScope.HTroomDetail.no }">
+                            <form id="msform" action="${pageContext.request.contextPath}/ht/room/delete" method="get">
+		                       	<input type="hidden" name="no" value="${requestScope.HTroomDetail.no }">
 							<fieldset>
                                     <div class="form-card">
                                         <div class="row">
@@ -80,7 +81,7 @@
                                         	<input type="text"  placeholder="${requestScope.HTroomDetail.checkOut }" />
                                         	
                                     		<label class="fieldlabels">이름<span class="text-danger">*</span></label>
-                                        	<input type="text" name="petName" placeholder="${requestScope.HTroomDetail.petName }" />
+                                        	<input type="text"  placeholder="${requestScope.HTroomDetail.petName }" />
                                         	
                                             <label class="fieldlabels">분류 (종)<span class="text-danger">*</span></label>
 											<input type="text" value="${requestScope.HTroomDetail.petKind }" readonly> 
@@ -93,10 +94,8 @@
 											
                                             <label class="fieldlabels">중성화여부<span class="text-danger">*</span></label>
 											<input type="text" value="${requestScope.HTroomDetail.petNeut }"readonly> 
-											
-											<label class="fieldlabels">예약시간<span class="text-danger">*</span></label>
-											<input type="text" value="${requestScope.HTroomDetail.time }"readonly> 
-											
+										
+
                                             <label for="exampleFormControlTextarea1">특이사항</label>
                                             <input type="text" value="${requestScope.HTroomDetail.message }"readonly>
                                              
@@ -105,25 +104,32 @@
                                     
                                     </div> 
                                     
-                                    <input type="button" id="home" class="previous action-button-previous"
+                                    <input type="button" id="home2" class="previous action-button-previous"
                                         value="돌아가기" />
-                                    <input type="submit" id="bookCancel" class="next action-button" value="예약취소" />
+                                    <input type="button" name="roomDelete" id="roomDelete" class="next action-button" value="예약취소" onclick="location.href='${ pageContext.servletContext.contextPath}/ht/room/delete?no=${ requestScope.HTroomDetail.no }'"/>
                                 </fieldset>
                                 </form>
-                                </div>
-                                </div>
-                                </div>
-                                </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
                                 
 </section>
 
 <script type="text/javascript">
 
 
-if (document.getElementById("home")) {
-	const $home = document.getElementById("home");
-	$home.onclick = function() {
-		location.href = "${pageContext.request.contextPath}";
+if (document.getElementById("home2")) {
+	const $home2 = document.getElementById("home2");
+	$home2.onclick = function() {
+		location.href = "${pageContext.request.contextPath}/ht/main";
+	}
+}
+
+if (document.getElementById("no")) {
+	const $no = document.getElementById("no");
+	$no.onclick = function() {
+		location.href = "${pageContext.request.contextPath}/ht/room/delete";   
 	}
 }
 </script>

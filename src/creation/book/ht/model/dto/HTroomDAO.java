@@ -107,6 +107,7 @@ private final Properties prop;
 		
 		return roomList;
 	}
+	
 	public HTroomDTO selectRoomDetail(Connection con, int no) {
 		PreparedStatement pstmt = null;
 		ResultSet rset = null;
@@ -147,6 +148,33 @@ private final Properties prop;
 			close(pstmt);
 		}
 		return roomDetail;
+	}
+	/* 호텔 룸 예약확인 딜리트 메소드 */
+	public int deleteRoom(Connection con, HTroomDTO deleteRoom) {
+		PreparedStatement pstmt = null;
+		int result = 0;
+		
+		String query = prop.getProperty("roomCancel");
+		
+		try {
+			
+			pstmt = con.prepareStatement(query);
+			pstmt.setInt(1, deleteRoom.getNo());
+			
+			
+			result = pstmt.executeUpdate();
+			
+		} catch (SQLException e) {
+			
+			e.printStackTrace();
+			
+		} finally {
+			
+			close(pstmt);
+			
+		}
+		
+		return result;
 	}
 
 }

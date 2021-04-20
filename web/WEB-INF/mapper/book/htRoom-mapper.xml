@@ -67,7 +67,13 @@
 	       JOIN HOTEL_ROOM B ON(A.HT_ROOM_NO = B.ROOM_NO)
 	      WHERE HT_ROOM_BK_NO = ?
 	</entry>
-	
+	<entry key="roomCancel">
+         UPDATE
+                HOTEL_ROOM_RESERVATION A
+            SET A.HT_ROOM_STATUS = '취소'
+          WHERE HT_ROOM_STATUS ='진행중'
+            AND HT_ROOM_BK_NO =?
+  </entry>
 	
 	
 </properties>

@@ -53,6 +53,7 @@ public class HTroomService {
 		close(con);
 		return roomList;
 	}
+	
 	public HTroomDTO selectRoomDetail(int no) {
 		Connection con = getConnection();
 		HTroomDTO roomDetail = null;
@@ -68,6 +69,21 @@ public class HTroomService {
 		close(con);
 		
 		return roomDetail;
+	}
+	public int deleteRoom(HTroomDTO deleteRoom) {
+		Connection con = getConnection();
+		
+		int result = htRoomDAO.deleteRoom(con, deleteRoom);
+		
+		if(result>0) {
+			commit(con);
+		}else {
+			rollback(con);
+		}
+		
+		close(con);
+		
+		return result;
 	}
 
 }
