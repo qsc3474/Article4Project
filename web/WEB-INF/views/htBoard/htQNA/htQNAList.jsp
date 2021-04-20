@@ -24,9 +24,11 @@
     <link rel="stylesheet" href="/creation/resources/css/common2.css">
     <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
 <style>
-thead {
-	border-top: 2px solid #FDC647 !important;
-}
+html{background:#f8f8f8;}
+.notice-sec { padding: 0 70px; }
+.panel { border: 0 !important;}
+thead {border-top: 2px solid #FDC647 !important;}
+body{text-align: center;}
 </style>
 </head>
 <body>

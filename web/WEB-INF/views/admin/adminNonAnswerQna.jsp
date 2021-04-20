@@ -7,79 +7,67 @@
 <meta charset="UTF-8">
 <title>관리자페이지</title>
 
-
-<!-- Site Stylesheet -->
-<link rel="stylesheet" href="assets/css/app.css" type="text/css">
-
-<!-- 추가 -->
-<script
-	src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-
 <style>
-div.bhoechie-tab-menu div.list-group>a.active:after {
-	display: none;
+html{background:#f8f8f8;}
+.notice-sec { padding: 0 70px; }
+.panel { border: 0 !important;}
+thead, .list-group {border-top: 2px solid #FDC647 !important;}
+table{text-align: center;}
+.list-group-item:hover {
+    z-index: 2;
+    color: #fff;
+    background-color: #FDC647 !important;
+    border-color: #FDC647 !important;
 }
-
-div.bhoechie-tab-menu div.list-group>a .fa {
-	color: #ccc;
-}
-
-div.bhoechie-tab-menu div.list-group>a.active, div.bhoechie-tab-menu div.list-group>a.active .fa
-	{
-	background-color: #ccc;
-	background-image: #ccc;
-	color: #ffffff;
-	border: #ccc;
-}
-
-.notice-sec {
-	padding: 0 70px;
-}
-thead {border-top: 2px solid #FDC647 !important;}
- 
+.list-group-item{padding: 15px 15px !important; letter-spacing: 0px; font-size:15px; }
+.list-group-item sapn{ font-weight: bold;}
 </style>
 
 </head>
 <body>
 
 	<jsp:include page="../common/header.jsp"></jsp:include>
-	<section class="step-title pt-null">
-		<div class="section-title text-center" data-wow-duration="1000ms"
-			data-wow-delay="0.3s">
-			<h2>미응답 QnA 조회</h2>
-		</div>
-	</section>
+	<!-- title -->
+        <section class="step-title bg-white">
+            <div class="section-title ht-title text-center" data-wow-duration="1000ms" data-wow-delay="0.3s">
+                <h2>미응답 QnA 조회</h2>
+            </div>
+        </section>
+        <!-- /title -->
+	
 
-	<section class="notice-sec">
-		<div class="container">
-			<div class="row col-md-10">
-			<div class="col-lg-2">
+	<section class="notice-sec bg-white">
+		<div class="full-container">
+			<div class="row">
+			<div class="col-md-2">
 				<div class="page-submenu">
 					<div class="list-group">
 						<a
 							href="${ pageContext.servletContext.contextPath }/admin/book/List"
-							class="list-group-item active text-center">
-							<h4 class="glyphicon glyphicon"></h4> <br />예약관리
-						</a> <a href="${ pageContext.servletContext.contextPath}/admin/board"
 							class="list-group-item text-center">
-							<h4 class="glyphicon glyphicon"></h4> <br />관리자 게시판 관리
-						</a> <a
+							<span class="glyphicon glyphicon-pencil "> 예약관리</span> <br />
+						</a> <a href="${ pageContext.servletContext.contextPath} /admin/board"
+							class="list-group-item text-center">
+							<span class="glyphicon glyphicon-pencil "> 관리자 게시판관리</span> <br />
+						</a> 
+						<a
 							href="${ pageContext.servletContext.contextPath }/admin/nonAnswer/qna"
 							class="list-group-item text-center">
-							<h4 class="glyphicon glyphicon"></h4> <br />미응답 Q&A 관리
-						</a> <a
-							href="${ pageContext.servletContext.contextPath }/admin/member/list"
+							<span class="glyphicon glyphicon-pencil "> 미응답 Q&A관리</span> <br />
+						</a>
+						<a
+							href="${ pageContext.servletContext.contextPath }/hp/report/count/list"
 							class="list-group-item text-center">
-							<h4 class="glyphicon"></h4> <br />회원 관리
+							<span class="glyphicon glyphicon-pencil "> 회원관리</span> <br />
 						</a> <a
 							href="${ pageContext.servletContext.contextPath }/hp/report/count/list"
 							class="list-group-item text-center">
-							<h4 class="glyphicon "></h4> <br /> 신고 관리
+							<span class="glyphicon glyphicon-pencil "> 신고관리</span> <br /> 
 						</a>
 					</div>
 				</div>
 			</div>
-			<div class="col-md-6">
+			<div class="col-md-10">
 				<div id="page-wrapper">
 					<div id="page-inner">
 						<div class="row">

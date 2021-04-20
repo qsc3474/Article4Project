@@ -5,23 +5,23 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
-   
-   <!-- 추가 -->
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<title>예약조회</title>
 
-    <style>
-
-.notice-sec {padding: 0 70px;}
-.collapse {
-	border-collapse: collapse;
-	border: 0;}
-thead {border-top: 2px solid #FDC647 !important;}
-.table-striped>tbody>tr:nth-of-type(odd) {
-    background-color: #f9f9f9!important;
+<style>
+html{background:#f8f8f8;}
+.notice-sec { padding: 0 70px; }
+.panel { border: 0 !important;}
+thead, .list-group {border-top: 2px solid #FDC647 !important;}
+table{text-align: center;}
+.list-group-item:hover {
+    z-index: 2;
+    color: #fff;
+    background-color: #FDC647 !important;
+    border-color: #FDC647 !important;
 }
- 
-    </style>
+.list-group-item{padding: 15px 15px !important; letter-spacing: 0px; font-size:15px; }
+.list-group-item sapn{ font-weight: bold;}
+</style>
 
 </head>
 <body>
@@ -38,34 +38,31 @@ thead {border-top: 2px solid #FDC647 !important;}
 
       <section class="notice-sec bg-white">
 		<div class="full-container">
-		<div class="row col-md-10 col-md-offset-1">
+		<div class="row">
 			<div class="col-md-2">
 				<div class="page-submenu">
 					<div class="list-group">
 						<a
 							href="${ pageContext.servletContext.contextPath }/admin/book/List"
-							class="list-group-item active text-center">
-							<h4 class="glyphicon glyphicon"></h4>
-							<br />예약관리
-						</a> <a
-							href="${ pageContext.servletContext.contextPath }/admin/board"
 							class="list-group-item text-center">
-							<h4 class="glyphicon glyphicon"></h4>
-							<br />관리자 게시판 관리
-						</a> <a
+							<span class="glyphicon glyphicon-pencil "> 예약관리</span> <br />
+						</a> <a href="${ pageContext.servletContext.contextPath} /admin/board"
+							class="list-group-item text-center">
+							<span class="glyphicon glyphicon-pencil "> 관리자 게시판관리</span> <br />
+						</a> 
+						<a
 							href="${ pageContext.servletContext.contextPath }/admin/nonAnswer/qna"
 							class="list-group-item text-center">
-							<h4 class="glyphicon glyphicon"></h4>
-							<br />미응답 Q&A 관리
-						</a> <a href="${ pageContext.servletContext.contextPath }/admin/member/list"
+							<span class="glyphicon glyphicon-pencil "> 미응답 Q&A관리</span> <br />
+						</a>
+						<a
+							href="${ pageContext.servletContext.contextPath }/hp/report/count/list"
 							class="list-group-item text-center">
-							<h4 class="glyphicon"></h4>
-							<br />회원 관리
+							<span class="glyphicon glyphicon-pencil "> 회원관리</span> <br />
 						</a> <a
 							href="${ pageContext.servletContext.contextPath }/hp/report/count/list"
 							class="list-group-item text-center">
-							<h4 class="glyphicon "></h4>
-							<br /> 신고 관리
+							<span class="glyphicon glyphicon-pencil "> 신고관리</span> <br /> 
 						</a>
 					</div>
 				</div>
@@ -132,7 +129,7 @@ thead {border-top: 2px solid #FDC647 !important;}
                 </div>
           </div>          
         </div>
-<<<<<<< HEAD
+
        <script type="text/javascript">
               $(".deleteBtn").click(function(){
                  
@@ -146,7 +143,7 @@ thead {border-top: 2px solid #FDC647 !important;}
                 
                  
               });
-=======
+
         <script type="text/javascript">
         function deleteButtonAction(){
             	
@@ -161,7 +158,7 @@ thead {border-top: 2px solid #FDC647 !important;}
             	})
             	
             }
->>>>>>> refs/remotes/origin/master
+
         </script>
 
         <!-- container -->

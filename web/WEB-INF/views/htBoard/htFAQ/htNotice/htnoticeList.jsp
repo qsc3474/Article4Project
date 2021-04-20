@@ -52,7 +52,8 @@ thead {
 		</div>
 	</section>
 	<!-- /title -->
-	<section class="notice-sec bg-white pt-null">
+	
+	<section class="notice-sec bg-white">
 		<div class="container">
 			<div class="col-lg-2">
 				<aside class="page-submenu">

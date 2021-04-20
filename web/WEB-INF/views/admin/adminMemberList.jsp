@@ -5,34 +5,23 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
-
-<!-- Meta Data -->
-<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
-
-<!-- 추가 -->
-<script
-	src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<title>회원조회</title>
 
 <style>
-html {background:#f8f8f8;}
-
-div.bhoechie-tab-menu div.list-group>a .fa {
-	color: #ccc;
+html{background:#f8f8f8;}
+.notice-sec { padding: 0 70px; }
+.panel { border: 0 !important;}
+thead, .list-group {border-top: 2px solid #FDC647 !important;}
+table{text-align: center;}
+.list-group-item:hover {
+    z-index: 2;
+    color: #fff;
+    background-color: #FDC647 !important;
+    border-color: #FDC647 !important;
 }
-
-.notice-sec {
-	padding: 0 70px;
-}
-thead {
-	border-top: 2px solid #FDC647 !important;
-}
-
-.table-striped>tbody>tr:nth-of-type(odd) {
-    background-color: #f9f9f9!important;
-}
+.list-group-item{padding: 15px 15px !important; letter-spacing: 0px; font-size:15px; }
+.list-group-item sapn{ font-weight: bold;}
 </style>
 
 </head>
@@ -40,15 +29,16 @@ thead {
 
 	<jsp:include page="../common/header.jsp"></jsp:include>
 	<!-- title -->
-        <section class="step-title bg-white mt">
+        <section class="step-title bg-white">
             <div class="section-title ht-title text-center" data-wow-duration="1000ms" data-wow-delay="0.3s">
                 <h2>회원조회</h2>
             </div>
         </section>
         <!-- /title -->
 
-	<section class="notice-sec bg-white pt">
+	<section class="notice-sec bg-white">
 		<div class="full-container">
+		<div class="row">
 			<div class="col-lg-2">
 				<div class="page-submenu">
 					<div class="list-group">
@@ -141,6 +131,7 @@ thead {
 					</div>
 				</div>
 			</div>
+		</div>	
 		<!-- container -->
 	</section>
 

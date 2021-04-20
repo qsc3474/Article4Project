@@ -41,7 +41,7 @@
             </div>
         </section>
         <!-- /title -->
-		<section class="notice-sec bg-white pt-null">
+		<section class="notice-sec bg-white">
 	    <div class="container">
 	     	<div class="col-lg-2">
 	            <aside class="page-submenu">
@@ -60,7 +60,7 @@
 	                    </li>
 	                    <li>
 	                        <a href="${ pageContext.servletContext.contextPath }/ht/QNA/list">
-	                            <span>문의사항</span>
+	                            <span>Q &amp; A</span>
 	                            <i class="fas fa-chevron-right"></i>
 	                        </a>
 	                    </li>

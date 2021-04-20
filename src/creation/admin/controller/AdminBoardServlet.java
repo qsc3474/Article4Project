@@ -29,7 +29,7 @@ public class AdminBoardServlet extends HttpServlet {
 		System.out.println(adminBoardList);
 		
 		if(!adminBoardList.isEmpty()) {
-			path="/WEB-INF/views/admin/adminBoardList.jsp";
+			path="/WEB-INF/views/admin/adminBoardList.jsp"; 
 			request.setAttribute("adminBoardList", adminBoardList);
 		}else {
 			path="/WEB-INF/views/admin/adminBoardList.jsp";
