@@ -375,7 +375,7 @@
             </div>
             <div class="container">
                 <div class="row mb">
-                    <h3 class="text-center pb"><span class="underline--magical">소형견 미용요금</span></h3>
+                    <h3 class="text-center pb"><span class="underline--magical">중형견 미용요금</span></h3>
                     <div class="table-container deco inner-bordered center fc01">
                         <table border="1" class="table table-striped">
                         <thead>
@@ -430,7 +430,7 @@
                       </div>
                 </div>
                 <div class="row mb">
-                    <h3 class="text-center pb"><span class="underline--magical">중형견 미용요금</span></h3>
+                    <h3 class="text-center pb"><span class="underline--magical">소형견 미용요금</span></h3>
                     <div class="table-container deco inner-bordered center fc01">
                         <table border="1" class="table table-striped">
                             <thead>

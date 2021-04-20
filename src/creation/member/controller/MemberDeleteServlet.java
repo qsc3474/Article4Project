@@ -1,11 +1,13 @@
 package creation.member.controller;
 
 import java.io.IOException;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import creation.member.model.dto.MemberDTO;
 import creation.member.model.service.MemberService;
@@ -31,7 +33,9 @@ public class MemberDeleteServlet extends HttpServlet {
 		
 		if(result>0) {
 			path = "/WEB-INF/views/common/success.jsp";
-			request.setAttribute("successCode", "updateMember");
+			HttpSession session = request.getSession();
+			session.invalidate();
+			request.setAttribute("successCode", "deleteMember");
 		}else {
 		path = "/WEB-INF/views/common/failed.jsp";
 		request.setAttribute("message", "회원 정보 수정에 실패하셨습니다.");

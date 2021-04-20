@@ -35,7 +35,7 @@
 								</div>
 								<h5 class="title">개편한병원</h5>
 								<div class="price-table-button">
-									<a href="#" class="gp-btn btn-dark large btn-bradius">메인페이지</a>
+									<a href="${ pageContext.servletContext.contextPath }/home" class="gp-btn btn-dark large btn-bradius">메인페이지</a>
 								</div>
 							</div>
 						</div>
@@ -48,7 +48,7 @@
 								</div>
 								<h5 class="title">개편한호텔</h5>
 								<div class="price-table-button">
-									<a href="#" class="gp-btn btn-dark large btn-bradius">호텔사이트</a>	
+									<a href="${ pageContext.servletContext.contextPath }/ht/main" class="gp-btn btn-dark large btn-bradius">호텔사이트</a>	
 							</div>
 						</div>
 					</div>

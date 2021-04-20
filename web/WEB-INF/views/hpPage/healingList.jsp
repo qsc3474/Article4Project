@@ -146,42 +146,6 @@
 						</div>
 					</div>
 				</div>
-                <div class="Page navigation example text-center">
-					<ul class="pagination">
-						<li class="page-item">
-							<a class="page-link" href="#" aria-label="Previous">
-								<span aria-hidden="true">«</span>
-								<span class="sr-only">Previous</span>
-							</a>
-						</li>
-						<li class="page-item"><a class="page-link" href="#">1</a></li>
-						<li class="page-item"><a class="page-link" href="#">2</a></li>
-						<li class="page-item"><a class="page-link" href="#">3</a></li>
-						<li class="page-item">
-							<a class="page-link" href="#" aria-label="Next">
-								<span aria-hidden="true">»</span>
-								<span class="sr-only">Next</span>
-							</a>
-						</li>
-					</ul>
-				</div>
-                <div class="row col-md-12 col-md-offset-2">
-					<div class="col-md-4">
-						<select class="form-control" id="exampleFormControlSelect1">
-							<option>제목+내용</option>
-							<option>제목</option>
-							<option>내용</option>
-							<option>아이디</option>
-							<option>태그</option>
-						</select>
-					</div>
-					<div class="col-md-4">
-						<form class="form-inline">
-							<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-							<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-						</form>
-					</div>
-				</div>
 			</div>
 		</section>
         <!-- 갤러리 -->
