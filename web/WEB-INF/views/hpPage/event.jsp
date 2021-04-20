@@ -5,7 +5,6 @@
 <head>
 <meta charset="UTF-8">
 <title>이벤트</title>
-
 <style>
 html, body, button {
 	font-family: Arial, "돋움", Dotum, "굴림", Gulim, "Apple SD Gothic Neo",
@@ -96,8 +95,6 @@ button {
 	cursor: pointer;
 }
 </style>
-
-
 </head>
 <body id="home-version-1"
 	class="home-version-1 sticky-header transparent-header menu-two"
@@ -118,7 +115,6 @@ button {
 			</div>
 		</section>
 
-		<!-- 이벤트섹션 -->
 		<!-- 이벤트섹션 -->
 		<section id="event-page">
 			<div class="container">
@@ -287,14 +283,7 @@ button {
         </script>
 			</div>
 		</section>
-
-
-
 	</div>
-
-	<!-- Site Scripts -->
-	<script src="assets/js/smooth_scroll.min.js"></script>
-	<script src="assets/js/app.js"></script>
 
 	<jsp:include page="/WEB-INF/views/common/footer.jsp"></jsp:include>
 </body>

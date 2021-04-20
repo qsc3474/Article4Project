@@ -156,7 +156,7 @@
 						<div class="col-md-3">
 							<div class="blog-post wow fadeInUp list-hover" data-wow-delay="0.5s">
 								<div class="blog-thumb inner" style="float: right;">
-									<a href="${ pageContext.servletContext.contextPath }/hp/info/select/list">
+									<a href="${ pageContext.servletContext.contextPath }//hp/petInfo">
 										<img src="${ pageContext.servletContext.contextPath }/resources/media/img/cat06.jpg" alt="Blog thumb">
 									</a>
 									<a href="${ pageContext.servletContext.contextPath }/hp/petInfo" class="date">동물<br>정보상식</a>
@@ -174,13 +174,13 @@
 				<div class="section-title text-center wow fadeIn" data-wow-duration="1000ms" data-wow-delay="0.3s">
 					<h2>진료과목</h2>
 					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione aspernatur voluptate
-						<br>pariatur, fugiat animi, inventore atque sed, nam provident impedit quod
+						저희 ‘개편한 세상 동물병원’은 언제나 세심한 손길과 정성어린 진료로 반려동물과 보호자의 행복을 함께 지켜나가겠습니다.
 					</p>
 				</div>
 
 				<div class="row">
 					<div class="col-md-3 col-sm-6">
+						 <a href="${ pageContext.servletContext.contextPath }/hp/mg">
 						<div class="feature-box-one wow fadeInUp" data-wow-delay="0.2s">
 							<div class="fea-icon">
 								<i>
@@ -194,9 +194,11 @@
 										style="width: 50px; height: 50px;"></i>
 							</p>
 						</div>
+						</a>
 					</div>
 
 					<div class="col-md-3 col-sm-6">
+					<a href="${ pageContext.servletContext.contextPath }/hp/gs">
 						<div class="feature-box-one wow fadeInUp" data-wow-delay="0.2s">
 							<div class="fea-icon">
 								<i><img src="${ pageContext.servletContext.contextPath }/resources/media/img/dog.png" alt="dog" style="width: 50px; height: 50px;"></i>
@@ -207,9 +209,11 @@
 										style="width: 50px; height: 50px;"></i>
 							</p>
 						</div>
+						</a>
 					</div>
 
 					<div class="col-md-3 col-sm-6">
+					<a href="${ pageContext.servletContext.contextPath }/hp/ey">
 						<div class="feature-box-one wow fadeInUp" data-wow-delay="0.2s">
 							<div class="fea-icon">
 								<i><img src="${ pageContext.servletContext.contextPath }/resources/media/img/dog.png" alt="dog" style="width: 50px; height: 50px;"></i>
@@ -220,10 +224,11 @@
 										style="width: 50px; height: 50px;"></i>
 							</p>
 						</div>
+						</a>
 					</div>
 
 					<div class="col-md-3 col-sm-6">
-						<a href="dental.html">
+						<a href="${ pageContext.servletContext.contextPath }/hp/dental">
 							<div class="feature-box-one wow fadeInUp" data-wow-delay="0.2s">
 								<div class="fea-icon">
 									<i><img src="${ pageContext.servletContext.contextPath }/resources/media/img/dog.png" alt="dog" style="width: 50px; height: 50px;"></i>
@@ -252,7 +257,7 @@
 					</p>
 				</div>
 				<div class="cta-btncontainer-two">
-					<a href="event.html" target="_self" title="" class="gp-btn btn-dark medium btn-bradius">이벤트 보러가기</a>
+					<a href="${ pageContext.servletContext.contextPath }/hp/event" target="_self" title="" class="gp-btn btn-dark medium btn-bradius">이벤트 보러가기</a>
 				</div>
 			</div>
 		</section>
@@ -473,8 +478,8 @@
 				<ul>
 				  <li><a href="${ pageContext.servletContext.contextPath }/hp/book/insert" class="quick">진료예약</a><span><i class="glyphicon glyphicon-calendar"></i></span></li>
 				  <li><a href="${ pageContext.servletContext.contextPath }/hp/info/dental" class="quick">진료과목</a><span><i class="glyphicon glyphicon-th"></i></span></li>
-				  <li><a href="#" class="quick">진료서비스</a><span><i class="glyphicon glyphicon-check"></i></span></li>
-				  <li><a href="${ pageContext.servletContext.contextPath }/hp/notice/select/list" class="quick">공지사항</a><span><i class="glyphicon glyphicon-pencil"></i></span></li>
+				  <li><a href="${ pageContext.servletContext.contextPath }" class="quick">병원사이트</a><span><i class="glyphicon glyphicon-check"></i></span></li>
+				  <li><a href="${ pageContext.servletContext.contextPath }/ht/main" class="quick">호텔사이트</a><span><i class="glyphicon glyphicon-pencil"></i></span></li>
 				</ul>
 			  </nav>
 		</section>
