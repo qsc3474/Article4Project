@@ -6,6 +6,12 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+
+<style>
+td{vertical-align: middle !important;}
+thead{border-top: 2px solid #FDC647 !important;}
+</style>
+
 </head>
 <body id="home-version-1"
 	class="home-version-1 sticky-header transparent-header menu-two"
@@ -16,34 +22,33 @@
 		<div class="section-title ht-title text-center"
 			data-wow-duration="1000ms" data-wow-delay="0.3s">
 			<h2>호텔 이용후기</h2>
-			<h3 class="text-center pb">
-				<span class="underline--magical">베스트 후기</span>
-			</h3>
+			<h3 class="text-center pb"><span class="underline--magical" style="font-size:24px;">베스트 후기</span> </h3>
 		</div>
 	</section>
 
 	<section id="Gallery" class="bg-white">
 		<div class="container">
-			<div class="cf"></div>
+			<div class="cf"></div>	
 			<div class="blog-items">
 				<div class="row">
 					<c:forEach items="${ requestScope.bestBoardList }" var="bestReview">
 						<div class="col-md-3">
 							<div class="blog-post wow fadeInUp" data-wow-delay="0.3s">
-								<a href="#">
+								<a href="${ pageContext.servletContext.contextPath }/hp/review/detail?no=${ bestReview.no }">
 									<div class="blog-thumb">
-										<c:if test="${ bestReview.fileList[0].thumbnailPath ne null}">
-											<img src="${ pageContext.servletContext.contextPath }${ bestReview.fileList[0].thumbnailPath }'" alt="Blog thumb">
+										<c:if test="${ bestReview.fileList[0].path ne null}">
+											<img src="${ pageContext.servletContext.contextPath }/resources/upload/picture/original/${ bestReview.fileList[0].name }">
 										</c:if>
 										<div class="blog-overlay"></div>
 									</div>
 								</a>
 								<div class="blog-content">
+									<input type="hidden" value="${ bestReview.no }">
 									<ul class="post-meta">
 										<li><a href="#">${ bestReview.drawupDate }</a></li>
 									</ul>
 									<h3>
-										<a href="#">${ bestReview.title }</a>
+										<a href="${ pageContext.servletContext.contextPath }/hp/review/detail?no=${ bestReview.no }">${ bestReview.title }</a>
 									</h3>
 									<p class="font-16">
 										${ bestReview.content }
@@ -51,8 +56,8 @@
 											<c:out value="(${ bestReview.cmtCount })" />
 										</c:if>
 									</p>
-									<h6>${ bestReview.watched }</h6>
-									<a href="review-detail.html" class="read-more-btn">Read
+									<h6>조회수 : ${ bestReview.watched }</h6>
+									<a href="${ pageContext.servletContext.contextPath }/hp/review/detail?no=${ bestReview.no }" class="read-more-btn">Read
 										More</a>
 								</div>
 							</div>
@@ -63,17 +68,25 @@
 		</div>
 	</section>
 
-	<section class="bg-light">
+	<section class="bg-white">
 		<div class="container">
 			<h3 class="text-center pb">
-				<span class="underline--magical">후기게시판 목록</span>
+				<span class="underline--magical"  style="font-size:24px;">후기게시판 목록</span>
 			</h3>
 			<jsp:include page="/WEB-INF/views/board/pageSubmenu.jsp"></jsp:include>
 			<div class="col-lg-10">
 				<div class="cf"></div>
 				<div class="row mb" style="padding: 0 12px;">
-					<div class="table-container deco inner-bordered center fc01">
-						<table border="1" class="table table-striped">
+					<div class="table-container inner-bordered center fc01">
+						<table border="1" class="table table-hover table-striped">
+							<colgroup>
+                                <col width="10%">
+                                <col width="15%">
+                                <col width="10%">
+                                <col width="40%">
+                                <col width="15%">
+                                <col width="10%">
+                            	</colgroup>
 							<thead>
 								<tr>
 									<th style="width: 70px;">번호</th>
@@ -147,12 +160,10 @@
 					<button id="searchMaxPage">>></button>
 
 				</div>
-				<br> <br>
-
 
 				<form id="searchForm"
 					action="${ pageContext.servletContext.contextPath }/hp/info/search/list"
-					method="get">
+					method="get" style="padding-top:20px">
 					<div class="search-area" align="center">
 						<c:choose>
 							<c:when test="${ !empty requestScope.searchValue }">
@@ -176,9 +187,9 @@
 								<input type="search" id="searchValue" name="searchValue">
 							</c:otherwise>
 						</c:choose>
-						<button type="submit">검색하기</button>
+						<button type="submit" class="gp-btn btn-dark" style="padding:7px 15px;">검색하기</button>
 						<c:if test="${ !empty sessionScope.loginMember }">
-							<button type="button" id="writeBoard" style="text-align: right">작성하기</button>
+							<button type="button" id="writeBoard" class="gp-btn btn-dark" style="text-align: right; padding:7px 15px;">작성하기</button>
 						</c:if>
 					</div>
 				</form>
@@ -282,6 +293,13 @@
 										.eq(index).addClass("active");
 							});
 				});
+		function detailBestReviewBoard(){
+			
+			const no = this.parentNode.children[0].value;
+			location.href = "${ pageContext.servletContext.contextPath }/hp/review/detail?no="
+				+ no;
+			
+		}
 	</script>
 </body>
 </html>
