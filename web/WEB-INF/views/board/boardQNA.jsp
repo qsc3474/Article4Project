@@ -160,7 +160,7 @@ thead {
 								</div>
 
 								<form id="searchForm"
-									action="${ pageContext.servletContext.contextPath }/hp/info/search/list"
+									action="${ pageContext.servletContext.contextPath }/hp/qna/search/list"
 									method="get" style="padding-top:20px;">
 									<div class="search-area" align="center">
 										<c:choose>

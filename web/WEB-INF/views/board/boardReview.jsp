@@ -162,7 +162,7 @@ thead{border-top: 2px solid #FDC647 !important;}
 				</div>
 
 				<form id="searchForm"
-					action="${ pageContext.servletContext.contextPath }/hp/info/search/list"
+					action="${ pageContext.servletContext.contextPath }/hp/review/search/list"
 					method="get" style="padding-top:20px">
 					<div class="search-area" align="center">
 						<c:choose>
