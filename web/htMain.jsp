@@ -222,7 +222,7 @@
 					<p>개편한세상 병원은 개편한 호텔과 함께 운영 되고 있습니다.</p>
 				</div>
 				<div class="cta-btncontainer-two">
-					<a href="${ pageContext.servletContext.contextPath }/ht/event" target="_self" title=""
+					<a href="${ pageContext.servletContext.contextPath }/ht/event/roulette" target="_self" title=""
 						class="gp-btn btn-dark medium btn-bradius">이벤트 보러가기</a>
 				</div>
 			</div>

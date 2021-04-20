@@ -50,7 +50,7 @@
 						<ul class="sub-menu">
 							<li><a href="${ pageContext.servletContext.contextPath }/ht/service">서비스 프로그램</a></li>
 							<li><a href="${ pageContext.servletContext.contextPath }/ht/package">피키지 프로그램</a></li>
-							<li><a href="${ pageContext.servletContext.contextPath }/ht/event">이벤트</a></li>
+							<li><a href="${ pageContext.servletContext.contextPath }/ht/event/roulette">이벤트</a></li>
 						</ul></li>
 					<li class="menu-item-has-children"><a href="booking.html">예약하기</a>
 						<ul class="sub-menu">
@@ -106,7 +106,7 @@
 						<li><a
 							href="${ pageContext.servletContext.contextPath }/member/logout">로그아웃</a></li>
 						<li><a
-							href="${ pageContext.servletContext.contextPath }/member/update">관리자</a></li>
+							href="${ pageContext.servletContext.contextPath }/admin/book/List">관리자</a></li>
 						<li><a
 							href="${ pageContext.servletContext.contextPath }/member/update">마이페이지</a></li>
 					</ul>

@@ -102,6 +102,7 @@ public class AuthenticationFilter implements Filter {
 		adminPermitList.add("/ht/NTC/notice/delete");
 		adminPermitList.add("/ht/NTC/notice/insert");
 		adminPermitList.add("/ht/NTC/notice/update");
+		adminPermitList.add("/ht/event/roulette");
 		
 		/* 회원과 관리자만 허용될 경로 */
 		memberPermitList.add("/member/logout");

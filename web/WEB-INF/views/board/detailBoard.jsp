@@ -142,15 +142,16 @@ tbody {
 								<td>조회수</td>
 								<td>${ requestScope.board.watched }</td>
 							</tr>
-							
+
 							<c:if test="${ requestScope.board.categoryNo eq 'HP_NTC' }">
 								<tr>
 									<th scope="row">파일</th>
-									<td colspan="5">
-									<c:if test="${ requestScope.board.fileList[0].name ne null}">
-										<a href="${pageContext.servletContext.contextPath}/resources/upload/file/${ requestScope.board.fileList[0].name }" download="${ requestScope.board.fileList[0].originName }">첨부파일</a>
-									</c:if>
-									</td>
+									<td colspan="5"><c:if
+											test="${ requestScope.board.fileList[0].name ne null}">
+											<a
+												href="${pageContext.servletContext.contextPath}/resources/upload/file/${ requestScope.board.fileList[0].name }"
+												download="${ requestScope.board.fileList[0].originName }">첨부파일</a>
+										</c:if></td>
 								</tr>
 							</c:if>
 							<tr>
@@ -169,18 +170,22 @@ tbody {
 									</c:if>
 									<p id="exampleFormControlTextarea1"
 										style="height: 200px; background: #fff; border: 1px solid #ddd; padding: 10px;">${ requestScope.board.content }</p>
-									<c:if test="${ sessionScope.loginMember.kind eq 'M' }">
-										<div class="button-group text-center" style="margin-top: 10px">
+									<div class="button-group text-center" style="margin-top: 10px">
+										<c:if test="${ sessionScope.loginMember.kind eq 'M' || sessionScope.loginMember.no == requestScope.board.memberNo }">
 											<input type='hidden' value="${ requestScope.board.no }">
-											<button id='updateBoard' type="button" class="gp-btn small btn-primary">수정</button>
-											<button id='deleteBoard' type="button" class="gp-btn small btn-dark center">삭제</button>
-											<div style="float: left;">
-												<c:if test="${ requestScope.board.categoryNo eq 'HP_RV'}">
-													<button id='reportBoard' type="button" class="gp-btn small btn-dark center"	style="background: red">신고</button>
-												</c:if>
-											</div>
+											<button id='updateBoard' type="button"
+												class="gp-btn small btn-primary">수정</button>
+											<button id='deleteBoard' type="button"
+												class="gp-btn small btn-dark center">삭제</button>
+										</c:if>
+										<div style="float: left;">
+											<c:if test="${ requestScope.board.categoryNo eq 'HP_RV'}">
+												<button id='reportBoard' type="button"
+													class="gp-btn small btn-dark center"
+													style="background: red">신고</button>
+											</c:if>
 										</div>
-									</c:if>
+									</div>
 								</td>
 							</tr>
 						</tbody>
