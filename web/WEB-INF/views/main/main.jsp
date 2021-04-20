@@ -248,19 +248,6 @@
 		<!-- 진료과목 -->
 
 		<!-- banner -->
-		<section id="call-to-action-two">
-			<div class="container">
-				<div class="cta-text-two">
-					<h3>이벤트 보러가기</h3>
-					<p>
-						개편한세상 병원은 개편한 호텔과 함께 운영 되고 있습니다.
-					</p>
-				</div>
-				<div class="cta-btncontainer-two">
-					<a href="${ pageContext.servletContext.contextPath }/hp/event" target="_self" title="" class="gp-btn btn-dark medium btn-bradius">이벤트 보러가기</a>
-				</div>
-			</div>
-		</section>
 		<!-- banner -->
 
 		<section id="about-three" data-bg-image="${ pageContext.servletContext.contextPath }/resources/media/background/2.jpg"
