@@ -43,7 +43,7 @@ public class HPReportCountSelectListSevlet extends HttpServlet {
 		
 		String recordsPerPage = request.getParameter("recordsPerPage");
 		
-		int limit = 10;
+		int limit = 100;
 		
 		if(recordsPerPage != null && !"def".equals(recordsPerPage) && !"".equals(recordsPerPage)) {
 			
@@ -67,7 +67,7 @@ public class HPReportCountSelectListSevlet extends HttpServlet {
 			
 		} else {
 			
-			path = "/WEB-INF/views/reportList.jsp";
+			path = "/WEB-INF/views/admin/reportList.jsp";
 			request.setAttribute("reportCountList", reportCountList);
 			request.setAttribute("pageInfo", pageInfo);
 			

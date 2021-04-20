@@ -13,6 +13,7 @@ import java.util.List;
 import java.util.Properties;
 
 import creation.book.ht.model.dao.HTeventDTO;
+import creation.book.ht.model.dao.HTroomDTO;
 import creation.common.config.ConfigLocation;
 
 public class HTeventDAO {
@@ -110,6 +111,74 @@ public class HTeventDAO {
 		
 		
 		return eventList;
+	}
+
+	public HTeventDTO selectEventDetail(Connection con, int no) {
+		PreparedStatement pstmt = null;
+		ResultSet rset = null;
+		
+		HTeventDTO eventDetail = null;
+		String query = prop.getProperty("eventDetail");
+		
+		try {
+			pstmt = con.prepareStatement(query);
+			pstmt.setInt(1, no );
+			
+			rset = pstmt.executeQuery();
+			
+			if(rset.next()) {
+				eventDetail = new HTeventDTO();
+				
+				eventDetail.setEventNo(rset.getInt("HT_EVENT_BK_NO"));
+				eventDetail.setEventType(rset.getString("HT_EVENT_TYPE"));
+				eventDetail.setTime(rset.getString("HT_ER_TIME"));
+				eventDetail.setTimeOut(rset.getString("HT_ER_TIMEOUT"));
+				eventDetail.setPetNo(rset.getString("HT_PET_NO"));
+				eventDetail.setPetName(rset.getString("HT_PET_NAME"));
+				eventDetail.setKind(rset.getString("HT_PET_KIND"));
+				eventDetail.setPetGender(rset.getString("HT_PET_GENDER"));
+				eventDetail.setPetAge(rset.getString("HT_PET_AGE"));
+				eventDetail.setPetNeut(rset.getString("HT_PET_NEUT"));
+				eventDetail.setMessage(rset.getString("HT_BK_MESSAGE"));
+				eventDetail.setMemNo(rset.getInt("HT_MEM_NO"));
+				
+			}
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		finally {
+			close(rset);
+			close(pstmt);
+		}
+		return eventDetail;
+	}
+
+	public int deleteEvent(Connection con, HTeventDTO deleteEvent) {
+		PreparedStatement pstmt = null;
+		int result = 0;
+		
+		String query = prop.getProperty("eventCancel");
+		
+		try {
+			
+			pstmt = con.prepareStatement(query);
+			pstmt.setInt(1, deleteEvent.getEventNo());
+			
+			
+			result = pstmt.executeUpdate();
+			
+		} catch (SQLException e) {
+			
+			e.printStackTrace();
+			
+		} finally {
+			
+			close(pstmt);
+			
+		}
+		
+		return result;
 	}
 
 }

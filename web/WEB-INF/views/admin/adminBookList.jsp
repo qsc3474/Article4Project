@@ -92,22 +92,28 @@
 							<div class="row">
 								<div class="col-md-12">
 									<div class="panel panel-default panel-wrap">
+									   <form action="${pageContext.request.contextPath}/admin/book/update" method="get">
 										<table class="table table-hover table-bordered"
 											id="dataTables-example"
 											aria-describedby="dataTables-example_info">
 											<thead>
-                                                            <tr>
+                                                  <tr>
                                                                 
-                                                                <th>글 번호</th>                                    
-                                                                <th>제목</th>
-                                                                <th>내용</th>
-                                                                <th>작성일</th>                                    
-                                                                <th>작성자번호</th>                                    
-                                                              
+                                                                <th>예약번호</th>                                    
+                                                                <th>회원번호</th>
+                                                                <th>예약시간</th>
+                                                                <th>동물 종류</th>                                    
+                                                                <th>동물 이름</th>                                    
+                                                                <th>동물 나이</th>                                    
+                                                                <th>중성화 여부</th>
+                                                                <th>특이사항</th>
+                                                                <th>예약상태</th>
+                                                                 <th>완료/취소</th>
                                                             </tr>
                                                         </thead>
-                                                        <tbody>
+                                                       
                                                         
+                                                        <tbody>
                                                        <c:forEach var="book" items="${requestScope.allBookList }">                                                           <tr>
                                                               
                                                                
@@ -129,8 +135,11 @@
                                                             <tr>
                                                             
                                                           </c:forEach> 
+                                                          
                                                         </tbody>
+                                                       
                                                     </table>
+                                                     </form>
                                                 </div>
                                             </div>
                                         </div>
@@ -139,6 +148,24 @@
                 </div>
                     
         </div>
+        <script type="text/javascript">
+        function deleteButtonAction(){
+            	
+            	$(".deleteBtn").click(function(){
+            		
+            		var $parent = this.parentNode;
+            		console.log($parent);
+    			    var getNo = $parent.children[0];
+    			    console.log(getNo);
+    			    var no = getNo.value;
+    			    console.log(no);
+    			    location.href = "${pageContext.request.contextPath}/admin/book/delete?no=" + no;
+    			    
+            		
+            	})
+            	
+            }
+        </script>
         <!-- container -->
       </section>
 

@@ -9,6 +9,7 @@ import java.sql.Connection;
 import java.util.List;
 
 import creation.book.ht.model.dao.HTeventDTO;
+import creation.book.ht.model.dao.HTroomDTO;
 import creation.book.ht.model.dto.HTeventDAO;
 
 
@@ -57,6 +58,37 @@ public class HTevnetService {
 		}
 		close(con);
 		return eventList;
+	}
+	public HTeventDTO selectEventDetail(int no) {
+		Connection con = getConnection();
+		HTeventDTO eventDetail = null;
+		
+		eventDetail = hteventeDAO.selectEventDetail(con, no);
+		
+		
+			if(eventDetail != null) {
+				commit(con);
+			} else {
+				rollback(con);
+			}
+		close(con);
+		
+		return eventDetail;
+	}
+	public int deleteEvent(HTeventDTO deleteEvent) {
+		Connection con = getConnection();
+		
+		int result = hteventeDAO.deleteEvent(con, deleteEvent);
+		
+		if(result>0) {
+			commit(con);
+		}else {
+			rollback(con);
+		}
+		
+		close(con);
+		
+		return result;
 	}
 
 }

@@ -19,7 +19,17 @@ public class MemberUpdateServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		String path = "/WEB-INF/views/member/memberUpdate.jsp";
-		
+		HttpSession session = request.getSession();
+		MemberDTO member = ((MemberDTO)session.getAttribute("loginMember"));
+		String address = member.getAddress();
+		int firstDot = address.indexOf("$");
+		int lastDot = address.lastIndexOf("$");
+		String address1 = address.substring(0, firstDot);
+		String address2 = address.substring(firstDot + 1, lastDot);
+		String address3 = address.substring(lastDot + 1);
+		request.setAttribute("address1", address1);
+		request.setAttribute("address2", address2);
+		request.setAttribute("address3", address3);
 		request.getRequestDispatcher(path).forward(request, response);
 		
 	}

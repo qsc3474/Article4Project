@@ -119,20 +119,21 @@
                                             <label for="#">주소</label>
                                         </div>
                                         
+                                        <c:set var="TextValue" value="${sessionScope.loginMember.address }"/>
                                         
                                         <div class="col-md-7" style="float: right; margin-right: 220px;">
                                             <div class="form-group">
-                                                <input type="text" class="form-control" name="address1" id="zipCode"  readonly>
+                                                <input type="text" class="form-control" name="address1" id="zipCode"  value="${requestScope.address1 }" readonly>
                                             </div>
                                         </div>
                                           <div class="col-md-7" style="float: right; margin-right: 220px;">
                                             <div class="form-group">
-                                                <input type="text" class="form-control" name="address2" placeholder="상세주소" id="address1" readonly>
+                                                <input type="text" class="form-control" name="address2" placeholder="상세주소" id="address1" value="${requestScope.address2 }" readonly>
                                             </div>
                                         </div>
                                           <div class="col-md-7" style="float: right; margin-right: 220px;">
                                             <div class="form-group">
-                                                <input type="text" class="form-control" name="address3" placeholder="상세주소" id="address2" >
+                                                <input type="text" class="form-control" name="address3" placeholder="상세주소" id="address2"  value="${requestScope.address3 }" >
                                             </div>
                                         </div>
                                         <br>

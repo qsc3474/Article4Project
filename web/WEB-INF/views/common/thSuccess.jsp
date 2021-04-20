@@ -62,6 +62,11 @@
 				successMessage = "호텔 이벤트 예약에 성공하셨습니다!";
 				movePath = "${ pageContext.servletContext.contextPath }/ht/home"; 
 				break;
+				/* 호텔 이벤트 예약 취소  */
+			case "thEventDelete" :
+				successMessage = "호텔 이벤트 취소에 성공하셨습니다!";
+				movePath = "${ pageContext.servletContext.contextPath }/ht/home"; 
+				break;
 				
 				
 				/* 호텔 룸 예약  */
