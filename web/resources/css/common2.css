@@ -3,6 +3,7 @@
 body, html {
     font-family: 'Noto Sans KR', sans-serif !important;
     color: #0f0f0f !important;
+    background: #f8f8f8!important;
 }
 ul, li {
     list-style: none;
@@ -172,3 +173,5 @@ ul, li {
 .reserv-listbox td {
    padding: 15px 0 !important;
 }
+
+.section-title h2{color: #36b2b0 !important;}

@@ -10,73 +10,28 @@
 <!-- Meta Data -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="apple-touch-icon" sizes="180x180"
-	href="${ pageContext.servletContext.contextPath }/resources/assets/img/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32"
-	href="${ pageContext.servletContext.contextPath }/resources/assets/img/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16"
-	href="${ pageContext.servletContext.contextPath }/resources/assets/img/favicon-16x16.png">
-<title>index</title>
 
-<!-- Dependency Styles -->
-<link rel="stylesheet"
-	href="${ pageContext.servletContext.contextPath }/resources/dependencies/bootstrap/css/bootstrap.min.css"
-	type="text/css">
-<link rel="stylesheet"
-	href="${ pageContext.servletContext.contextPath }/resources/dependencies/font-awesome/css/font-awesome.min.css"
-	type="text/css">
-<link rel="stylesheet"
-	href="${ pageContext.servletContext.contextPath }/resources/dependencies/font-awesome/css/gp-icons.css"
-	type="text/css">
-<link rel="stylesheet"
-	href="${ pageContext.servletContext.contextPath }/resources/dependencies/gp-icons/style.css"
-	type="text/css">
-<!-- <link rel="stylesheet" href="dependencies/etlinefont-bower/style.css" type="text/css"> -->
-<link rel="stylesheet"
-	href="${ pageContext.servletContext.contextPath }/resources/dependencies/bootstrap-star-rating/css/star-rating.min.css"
-	type="text/css">
-<link rel="stylesheet"
-	href="${ pageContext.servletContext.contextPath }/resources/dependencies/swiper/css/swiper.min.css"
-	type="text/css">
-<link rel="stylesheet"
-	href="${ pageContext.servletContext.contextPath }/resources/dependencies/wow/animate.css"
-	type="text/css">
-<link rel="stylesheet"
-	href="${ pageContext.servletContext.contextPath }/resources/dependencies/jquery-ui/css/jquery-ui.css"
-	type="text/css">
-<link rel="stylesheet"
-	href="${ pageContext.servletContext.contextPath }/resources/dependencies/revslider/css/settings.css"
-	type="text/css">
-<link rel="stylesheet"
-	href="${ pageContext.servletContext.contextPath }/resources/dependencies/magnific-popup/magnific-popup.css"
-	type="text/css">
-
-<!-- Site Stylesheet -->
-<link rel="stylesheet" href="assets/css/app.css" type="text/css">
 
 <!-- 추가 -->
 <script
 	src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
 <style>
-div.bhoechie-tab-menu div.list-group>a.active:after {
-	display: none;
-}
+html {background:#f8f8f8;}
 
 div.bhoechie-tab-menu div.list-group>a .fa {
 	color: #ccc;
 }
 
-div.bhoechie-tab-menu div.list-group>a.active, div.bhoechie-tab-menu div.list-group>a.active .fa
-	{
-	background-color: #ccc;
-	background-image: #ccc;
-	color: #ffffff;
-	border: #ccc;
-}
-
 .notice-sec {
 	padding: 0 70px;
+}
+thead {
+	border-top: 2px solid #FDC647 !important;
+}
+
+.table-striped>tbody>tr:nth-of-type(odd) {
+    background-color: #f9f9f9!important;
 }
 </style>
 
@@ -84,15 +39,16 @@ div.bhoechie-tab-menu div.list-group>a.active, div.bhoechie-tab-menu div.list-gr
 <body>
 
 	<jsp:include page="../common/header.jsp"></jsp:include>
-	<section class="step-title pt-null">
-		<div class="section-title text-center" data-wow-duration="1000ms"
-			data-wow-delay="0.3s">
-			<h2>회원 조회</h2>
-		</div>
-	</section>
+	<!-- title -->
+        <section class="step-title bg-white mt">
+            <div class="section-title ht-title text-center" data-wow-duration="1000ms" data-wow-delay="0.3s">
+                <h2>회원조회</h2>
+            </div>
+        </section>
+        <!-- /title -->
 
-	<section class="notice-sec">
-		<div class="container">
+	<section class="notice-sec bg-white pt">
+		<div class="full-container">
 			<div class="col-lg-2">
 				<div class="page-submenu">
 					<div class="list-group">
@@ -128,10 +84,22 @@ div.bhoechie-tab-menu div.list-group>a.active, div.bhoechie-tab-menu div.list-gr
 				<div id="page-wrapper">
 					<div id="page-inner">
 							<div class="col-md-12">
-								<div class="panel panel-default panel-wrap">
+								<div class="table-container inner-bordered center fc01">
 									<table class="table table-hover table-bordered"
 										id="dataTables-example"
 										aria-describedby="dataTables-example_info">
+										<colgroup>
+		                                <col width="6%">
+		                                <col width="8%">
+		                                <col width="8%">
+		                                <col width="10%">
+		                                <col width="15%">
+		                                <col width="24%">
+		                                <col width="10%">
+		                                <col width="10%">
+		                                <col width="5%">
+		                                <col width="4%">
+		                            	</colgroup>
 										<thead>
 											<tr>
 
@@ -151,7 +119,6 @@ div.bhoechie-tab-menu div.list-group>a.active, div.bhoechie-tab-menu div.list-gr
 
 											<c:forEach var="mem" items="${requestScope.allMemberList }">
 												<tr>
-
 
 													<td><c:out value="${mem.no }" /></td>
 													<td><c:out value="${mem.id }" /></td>

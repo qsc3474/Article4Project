@@ -274,45 +274,12 @@
 					<div class="row row-post ">
 						<div class="col-md-6">
 							<div class="blog-post wow fadeInRight" data-wow-delay="0.9s">
-								<div class="blog-thumb">
-									<a href="reservation.html"> <img
-										src="${ pageContext.servletContext.contextPath }/resources/media/img/puppy05.jpg"
-										alt="Blog thumb">
-									</a> <a href="review.html" class="date">후기<br>게시판
-									</a>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6">
-							<div class="blog-post wow fadeInRight" data-wow-delay="0.9s">
-								<div class="blog-thumb">
-									<a href="reservation.html"> <img
-										src="${ pageContext.servletContext.contextPath }/resources/media/img/party01.jpg"
-										alt="Blog thumb">
-									</a> <a href="gallery-notice.html" class="date">갤러리 게시판</a>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-3">
-							<div class="blog-post wow fadeInRight" data-wow-delay="0.9s">
-								<div class="blog-thumb">
-									<a href="${ pageContext.servletContext.contextPath }/ht/NTC/notice/list"> <img
-										src="${ pageContext.servletContext.contextPath }/resources/media/img/dog.jpeg"
-										alt="Blog thumb">
-									</a> <a href="${ pageContext.servletContext.contextPath }/ht/NTC/notice/list" class="date">공지<br>사항
-									</a>
-								</div>
-
-							</div>
-						</div>
-						<div class="col-md-3">
-							<div class="blog-post wow fadeInRight" data-wow-delay="0.9s">
 
 								<div class="blog-thumb">
 									<a href="team.html"> <img
 										src="${ pageContext.servletContext.contextPath }/resources/media/img/cat11.jpg"
 										alt="Blog thumb">
-									</a> <a href="pet-info.html" class="date">동물<br>정보
+									</a> <a href="pet-info.html" class="date">공지<br>사항
 									</a>
 								</div>
 							</div>
@@ -322,7 +289,7 @@
 								data-wow-delay="0.5s">
 								<div class="blog-thumb inner" style="float: right;">
 									<a href="${ pageContext.servletContext.contextPath }/ht/QNA/list"> <img
-										src="${ pageContext.servletContext.contextPath }/resources/media/img/cat09.jpg"
+										src="${ pageContext.servletContext.contextPath }/resources/media/img/dog15.jpg"
 										alt="Blog thumb">
 									</a> <a href="${ pageContext.servletContext.contextPath }/ht/QNA/list" class="date">Q&amp;A</a>
 								</div>
@@ -336,6 +303,15 @@
 										src="${ pageContext.servletContext.contextPath }/resources/media/img/dog09.jpg"
 										alt="Blog thumb">
 									</a> <a href="${ pageContext.servletContext.contextPath }/ht/FAQ/list" class="date">FAQ</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="blog-post wow fadeInUp list-hover"
+								data-wow-delay="0.5s">
+								<div class="blog-thumb inner" style="float: right;">
+									<img src="${ pageContext.servletContext.contextPath }/resources/media/img/dog25.jpg"
+										alt="Blog thumb">
 								</div>
 							</div>
 						</div>

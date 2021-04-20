@@ -47,11 +47,14 @@
 <body>
 
 <jsp:include page="../common/header.jsp"></jsp:include>
-<section class="step-title pt-null">
-         <div class="section-title text-center" data-wow-duration="1000ms" data-wow-delay="0.3s">
-            <h2>신고 관리</h2>
-         </div>
-      </section>
+
+		<!-- title -->
+        <section class="step-title bg-white mt">
+            <div class="section-title ht-title text-center" data-wow-duration="1000ms" data-wow-delay="0.3s">
+                <h2>미응답 Q &amp; A 조회</h2>
+            </div>
+        </section>
+        <!-- /title -->
 
       <section class="notice-sec">
 		<div class="container">

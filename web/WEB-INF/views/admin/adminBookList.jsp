@@ -6,56 +6,40 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-
- <!-- Meta Data -->
-   <meta charset="utf-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1">
-   <link rel="apple-touch-icon" sizes="180x180" href="${ pageContext.servletContext.contextPath }/resources/assets/img/apple-touch-icon.png">
-   <link rel="icon" type="image/png" sizes="32x32" href="${ pageContext.servletContext.contextPath }/resources/assets/img/favicon-32x32.png">
-   <link rel="icon" type="image/png" sizes="16x16" href="${ pageContext.servletContext.contextPath }/resources/assets/img/favicon-16x16.png">
-   <title>index</title>
-
-   <!-- Dependency Styles -->
-   <link rel="stylesheet" href="${ pageContext.servletContext.contextPath }/resources/dependencies/bootstrap/css/bootstrap.min.css" type="text/css">
-   <link rel="stylesheet" href="${ pageContext.servletContext.contextPath }/resources/dependencies/font-awesome/css/font-awesome.min.css" type="text/css">
-   <link rel="stylesheet" href="${ pageContext.servletContext.contextPath }/resources/dependencies/font-awesome/css/gp-icons.css" type="text/css">
-   <link rel="stylesheet" href="${ pageContext.servletContext.contextPath }/resources/dependencies/gp-icons/style.css" type="text/css">
-   <!-- <link rel="stylesheet" href="dependencies/etlinefont-bower/style.css" type="text/css"> -->
-   <link rel="stylesheet" href="${ pageContext.servletContext.contextPath }/resources/dependencies/bootstrap-star-rating/css/star-rating.min.css" type="text/css">
-   <link rel="stylesheet" href="${ pageContext.servletContext.contextPath }/resources/dependencies/swiper/css/swiper.min.css" type="text/css">
-   <link rel="stylesheet" href="${ pageContext.servletContext.contextPath }/resources/dependencies/wow/animate.css" type="text/css">
-   <link rel="stylesheet" href="${ pageContext.servletContext.contextPath }/resources/dependencies/jquery-ui/css/jquery-ui.css" type="text/css">
-   <link rel="stylesheet" href="${ pageContext.servletContext.contextPath }/resources/dependencies/revslider/css/settings.css" type="text/css">
-   <link rel="stylesheet" href="${ pageContext.servletContext.contextPath }/resources/dependencies/magnific-popup/magnific-popup.css" type="text/css">
-
-   <!-- Site Stylesheet -->
-   <link rel="stylesheet" href="assets/css/app.css" type="text/css">
    
    <!-- 추가 -->
    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
     <style>
-        div.bhoechie-tab-menu div.list-group>a.active:after {display: none;}
-        div.bhoechie-tab-menu div.list-group>a .fa {color: #ccc;}
-        div.bhoechie-tab-menu div.list-group>a.active,
-        div.bhoechie-tab-menu div.list-group>a.active .fa {background-color: #ccc; background-image: #ccc; color: #ffffff; border: #ccc;}
 
 .notice-sec {padding: 0 70px;}
+.collapse {
+	border-collapse: collapse;
+	border: 0;}
+thead {border-top: 2px solid #FDC647 !important;}
+.table-striped>tbody>tr:nth-of-type(odd) {
+    background-color: #f9f9f9!important;
+}
+ 
     </style>
 
 </head>
 <body>
 
 <jsp:include page="../common/header.jsp"></jsp:include>
-<section class="step-title pt-null">
-         <div class="section-title text-center" data-wow-duration="1000ms" data-wow-delay="0.3s">
-            <h2>예약 조회</h2>
-         </div>
-      </section>
 
-      <section class="notice-sec">
-		<div class="container">
-			<div class="col-lg-2">
+	<section class="step-title bg-white">
+		<div class="section-title ht-title text-center"
+			data-wow-duration="1000ms" data-wow-delay="0.3s">
+			<h2>예약조회</h2>
+		</div>
+	</section>
+	
+
+      <section class="notice-sec bg-white">
+		<div class="full-container">
+		<div class="row col-md-10 col-md-offset-1">
+			<div class="col-md-2">
 				<div class="page-submenu">
 					<div class="list-group">
 						<a
@@ -86,7 +70,7 @@
 					</div>
 				</div>
 				</div>
-               <div class="col-lg-10">
+               <div class="col-md-10">
 					<div id="page-wrapper">
 						<div id="page-inner">
 							<div class="row">
@@ -146,26 +130,23 @@
                         </div>
                     </div>
                 </div>
-                    
+          </div>          
         </div>
-        <script type="text/javascript">
-        function deleteButtonAction(){
-            	
-            	$(".deleteBtn").click(function(){
-            		
-            		var $parent = this.parentNode;
-            		console.log($parent);
-    			    var getNo = $parent.children[0];
-    			    console.log(getNo);
-    			    var no = getNo.value;
-    			    console.log(no);
-    			    location.href = "${pageContext.request.contextPath}/admin/book/delete?no=" + no;
-    			    
-            		
-            	})
-            	
-            }
+       <script type="text/javascript">
+              $(".deleteBtn").click(function(){
+                 
+                 var $parent = this.parentNode;
+                 console.log($parent);
+                var getNo = $parent.children[0];
+                console.log(getNo);
+                var no = getNo.value;
+                console.log(no);
+                location.href = "${pageContext.request.contextPath}/admin/book/delete?no=" + no;
+                
+                 
+              });
         </script>
+
         <!-- container -->
       </section>
 
