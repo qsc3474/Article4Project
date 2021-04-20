@@ -53,7 +53,9 @@
 	<entry key="updateMember">
 	    UPDATE
 	           MEM_INFO A
-	       SET A.MEM_PHONE = ?
+	       SET 
+	           A.MEM_PWD = ?
+	         , A.MEM_PHONE = ?
 	         , A.MEM_ADDRESS = ?
 	         , A.MEM_EMAIL = ?
 	     WHERE A.MEM_NO = ?
@@ -72,5 +74,19 @@
 FROM MEM_INFO
 WHERE MEM_NAME=?
   AND MEM_EMAIL=?
+	</entry>
+	<entry key="findPwd">
+		SELECT
+       MEM_NO
+FROM MEM_INFO
+WHERE MEM_ID=?
+  AND MEM_NAME=?
+  AND MEM_EMAIL=?
+	</entry>
+   <entry key="pwdUpdate">
+  UPDATE 
+        MEM_INFO
+    SET MEM_PWD =?
+  WHERE MEM_NO=?	
 	</entry>
 </properties>

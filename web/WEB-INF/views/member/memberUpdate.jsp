@@ -53,7 +53,7 @@
                                             <label for="#">비밀번호</label>
                                         </div>
                                         <div class="form-group col-sm-7">
-                                            <input type="password" class="form-control" placeholder="비밀번호" name="memberPwd">
+                                            <input type="password" class="form-control" placeholder="비밀번호" name="pwd">
                                         </div>
                                         <!--/.form-group -->
                                     </div>
@@ -183,12 +183,12 @@
 	<script>
 		function postRequest(intent){
 			var $form = document.getElementById("form");
-			var passwordValue = document.getElementsByName("memberPwd")[0].value;
+			var passwordValue = document.getElementsByName("pwd")[0].value;
 			
 			// "", null, undefined, 0, NaN에 해당되면 false
 			if(!passwordValue || passwordValue === "") {	// 사용자가 비번을 입력하지 않았을 때
 				alert("비밀번호는 반드시 입력해야 합니다.");
-				document.getElemetsByName("memberPwd")[0].focus();
+				document.getElemetsByName("pwd")[0].focus();
 			}
 			
 			requestPath = "<%=request.getContextPath()%>";

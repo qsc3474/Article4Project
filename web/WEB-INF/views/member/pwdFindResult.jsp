@@ -14,21 +14,22 @@
 		<!-- id/pwd 찾기 -->
 		<section class="login-sec">
             <div class="section-title text-center" data-wow-duration="1000ms" data-wow-delay="0.3s">
-			<h2>아이디 찾기</h2>
+			<h2>비밀번호 변경</h2>
 
 			</div>
 			<div class="login-box">
-				
+				<form action="${ pageContext.servletContext.contextPath }/member/pwd" method="post">
 					<div class="form-group">
-						<h2>아이디 찾기</h2>
+						<h2>비밀번호 변경</h2>
 					</div>
 					<!-- /.form-group -->
 					<div class="form-group">
-					<h3>당신의 아이디는 <span><c:out value="${requestScope.memberId.id }"/></span> 입니다 </h3>
+					<label>새 비밀번호 입력</label><input type="password" name="pwd">
+					<input type="hidden" value="${requestScope.memberPwd.no }" name="no">
 					</div>
 					<!-- /.form-group -->
-					<a href="${ pageContext.servletContext.contextPath }/member/login"class="gp-btn btn-primary larg br-null b-null" >돌아가기 </a>
-				
+					<input type="submit"class="gp-btn btn-primary larg br-null b-null" value="변경하기">
+				</form>
 			</div>
 		</section>
 		<!-- id/pwd 찾기 -->
