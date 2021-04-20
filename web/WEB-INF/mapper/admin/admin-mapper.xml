@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<entry key="selectAllBook">
+		SELECT 
+		      *
+		  FROM HOSPITAL_BOOK
+         WHERE HP_BK_STATUS='진행중'
+      ORDER BY HP_BK_TIME DESC
+	</entry>
+	<entry key="updateBook">
+UPDATE
+       HOSPITAL_BOOK A
+   SET A.HP_BK_STATUS = '완료'
+ WHERE HP_BK_STATUS ='진행중'
+   AND HP_BK_NO =?	
+	</entry>
+	
+	<entry key="deleteBook">
+UPDATE
+       HOSPITAL_BOOK A
+   SET A.HP_BK_STATUS = '취소'
+ WHERE HP_BK_STATUS ='진행중'
+   AND HP_BK_NO =?		
+	
+	</entry>
+	
+	<entry key="selectAllMember">
+	SELECT
+	*
+	FROM MEM_INFO
+   ORDER BY ORDER BY MEM_NO ASC
+	</entry>
+	
+	<entry key="selectPrivateQnA">
+	SELECT
+	*
+	  FROM HOSPITAL_QNA
+     WHERE HP_QNA_STATUS ='PRIVATE'
+	</entry>
+	<entry key="selectNonAnswerQna">
+	SELECT
+	       *
+      FROM HOSPITAL_QNA 
+     WHERE HP_QNA_CMT_COUNT =0
+  ORDER BY HP_QNA_DRAWUP_DATE ASC
+	</entry>
+</properties>
