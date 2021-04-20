@@ -107,5 +107,46 @@ private final Properties prop;
 		
 		return roomList;
 	}
+	public HTroomDTO selectRoomDetail(Connection con, int no) {
+		PreparedStatement pstmt = null;
+		ResultSet rset = null;
+		
+		HTroomDTO roomDetail = null;
+		String query = prop.getProperty("roomDetail");
+		
+		try {
+			pstmt=con.prepareStatement(query);
+			pstmt.setInt(1, no );
+			
+			rset= pstmt.executeQuery();
+			
+			if(rset.next()) {
+				roomDetail = new HTroomDTO();
+				
+				roomDetail.setNo(rset.getInt("HT_ROOM_BK_NO"));
+				roomDetail.setType(rset.getString("HT_SERVICE_TYPE"));
+				roomDetail.setRoomNo(rset.getString("ROOM_TYPE"));
+				roomDetail.setCheckIn(rset.getString("HT_CHECK_IN_TIME"));
+				roomDetail.setCheckOut(rset.getString("HT_CHECK_OUT_TIME"));
+				roomDetail.setPetName(rset.getString("HT_PET_NAME"));
+				roomDetail.setPetKind(rset.getString("HT_PET_KIND"));
+				roomDetail.setPetGender(rset.getString("HT_PET_GENDER"));
+				roomDetail.setPetAge(rset.getString("HT_PET_AGE"));
+				roomDetail.setPetNeut(rset.getString("HT_PET_NEUT"));
+				roomDetail.setMessage(rset.getString("HT_BK_MESSAGE"));
+				roomDetail.setMemNo(rset.getInt("HT_MEM_NO"));
+				
+				
+			}
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		finally {
+			close(rset);
+			close(pstmt);
+		}
+		return roomDetail;
+	}
 
 }
