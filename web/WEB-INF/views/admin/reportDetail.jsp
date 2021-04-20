@@ -98,23 +98,24 @@
 											<thead>
                                                             <tr>
                                                                 
-                                                                <th>신고글 번호</th>                                    
-                                                                <th>제목</th>
-                                                                <th>신고 갯수</th>
-                                                                                                    
+                                                                <th>신고번호</th>                                    
+                                                                <th>신고자</th>
+                                                                <th>글 작성자</th>
+                                                                <th>신고사유</th>
+                                                                <th>상세내역</th>                                  
                                                               
                                                             </tr>
                                                         </thead>
                                                         <tbody>
                                                         
-                                                         <c:forEach var="report" items="${requestScope.reportCountList }">                                                           <tr>
+                                                         <c:forEach var="report" items="${requestScope.reportList }">                                                           <tr>
                                                               
                                                                
-                                                                <td><c:out  value="${report.reportedBoardNo }"/></td>
-                                                                <td><c:out value="${report.reportedBoard.title }"/></td>
-                                                                <td><c:out value="${report.count }"/></td>
-                                                                
-                                                                
+                                                                <td><c:out  value="${report.reportNo }"/></td>
+                                                                <td><c:out value="${report.reporter.name }"/></td>
+                                                                <td><c:out value="${report.reportedWriter.name }"/></td>
+                                                                <td><c:out value="${report.reportCategoryName.reportCategoryName }"/></td>
+                                                                <td><c:out value="${report.reportReasonContent }"/></td>
                                                             </tr>
                                                             <tr>
                                                             
@@ -130,29 +131,6 @@
                     
         </div>
         <!-- container -->
-      </section>
-      <script type="text/javascript">
-		if (document.getElementsByTagName("td")) {
-			const $tds = document
-					.getElementsByTagName("td");
-			for (var i = 0; i < $tds.length; i++) {
-	
-				$tds[i].onmouseenter = function() {
-					this.parentNode.style.cursor = "pointer";
-				}
-	
-				$tds[i].onmouseout = function() {
-				}
-	
-				$tds[i].onclick = function() {
-					const no = this.parentNode.children[0].innerText;
-					location.href = "${ pageContext.servletContext.contextPath }/hp/report/list?no="
-							+ no;
-				}
-			}
-		}
-		
-	
-		</script>
+  
 </body>
 </html>

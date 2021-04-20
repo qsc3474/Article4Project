@@ -43,7 +43,7 @@ public class HPReportCountSelectListSevlet extends HttpServlet {
 		
 		String recordsPerPage = request.getParameter("recordsPerPage");
 		
-		int limit = 10;
+		int limit = 100;
 		
 		if(recordsPerPage != null && !"def".equals(recordsPerPage) && !"".equals(recordsPerPage)) {
 			
