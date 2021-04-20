@@ -65,12 +65,15 @@
 						<ul class="sub-menu">
 							<li><a
 								href="${ pageContext.servletContext.contextPath }/hp/notice/select/list">공지사항</a></li>
-							<li><a href="notice.html">병원소식</a></li>
 							<li><a
-								href="${ pageContext.servletContext.contextPath }/hp/faq/select/list">블로그</a></li>
+								href="${ pageContext.servletContext.contextPath }/hp/faq/select/list">자주하는질문</a></li>
 							<li><a
-								href="${ pageContext.servletContext.contextPath }/ht/NTC/notice/list">오시는길</a></li>
-						</ul></li>
+								href="${ pageContext.servletContext.contextPath }/hp/qna/select/list">Q&amp;A</a></li>
+							<li><a
+								href="${ pageContext.servletContext.contextPath }/hp/review/select/list">이용후기</a></li>			
+
+						</ul>
+					</li>
 				</ul>
 				<c:if test="${ empty sessionScope.loginMember }">
 					<div class="secondary-navigation pull-right">

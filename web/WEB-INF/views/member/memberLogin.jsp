@@ -43,7 +43,7 @@
 				</div>
 				<!-- /.form-group -->
 				<input type="submit" class="gp-btn btn-primary larg br-null b-null" value="로그인" id="login">
-				<a href="sing-up.html" class="gp-btn btn-border larg br-null">회원가입</a>
+				<a href="sing-up.html" class="gp-btn btn-dark btn-border larg br-null" style="margin-top:10px;">회원가입</a>
 			</form>
 		</div>
 	</section>

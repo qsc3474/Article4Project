@@ -58,7 +58,7 @@
             <div class="row">
                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 bhoechie-tab-menu">
                   <div class="list-group">
-                     <a href="#" class="list-group-item active text-center">
+                     <a href="${ pageContext.servletContext.contextPath }/hp/notice/select/list" class="list-group-item active text-center">
                         <h4 class="glyphicon glyphicon"></h4><br />예약관리
                      </a>
                      <a href="#" class="list-group-item text-center">
