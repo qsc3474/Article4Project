@@ -31,8 +31,8 @@ public class HTRommListServlet extends HttpServlet {
 			path = "/WEB-INF/views/thRoomReservation/thRoomList.jsp";
 			request.setAttribute("roomList", roomList);
 		} else {						
-			path = "/WEB-INF/views/common/failed.jsp";
-			request.setAttribute("message", "예약확인 조회 실패!");
+			path = "/WEB-INF/views/thRoomReservation/thRoomList.jsp";
+			request.setAttribute("roomList", roomList);
 		}
 		
 		request.getRequestDispatcher(path).forward(request, response);

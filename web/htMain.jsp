@@ -332,10 +332,10 @@
 							<div class="blog-post wow fadeInUp list-hover"
 								data-wow-delay="0.5s">
 								<div class="blog-thumb inner" style="float: right;">
-									<a href="${ pageContext.servletContext.contextPath }/ht/FAQ/lis"> <img
+									<a href="${ pageContext.servletContext.contextPath }/ht/FAQ/list"> <img
 										src="${ pageContext.servletContext.contextPath }/resources/media/img/dog09.jpg"
 										alt="Blog thumb">
-									</a> <a href="${ pageContext.servletContext.contextPath }/ht/FAQ/lis" class="date">FAQ</a>
+									</a> <a href="${ pageContext.servletContext.contextPath }/ht/FAQ/list" class="date">FAQ</a>
 								</div>
 							</div>
 						</div>
