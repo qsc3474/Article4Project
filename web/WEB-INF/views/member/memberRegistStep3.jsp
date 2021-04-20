@@ -115,9 +115,16 @@
                                             <select id="email2" name="email2" class="form-control">
                                                 <option selected value="naver.com">naver.com</option>
                                                 <option>gmail.com</option>
-                                                <option>gmail.com</option>
-                                                <option>gmail.com</option>
-                                                <option>gmail.com</option>
+                                                <option>daum.net</option>
+                                                <option>nate.com</option>
+                                                <option>empal.com</option>
+                                                <option>unitel.co.kr</option>
+                                                <option>weppy.com</option>
+                                                <option>korea.com</option>
+                                                <option>hitel.net</option>
+                                                <option>dreamwiz.com</option>
+                                                <option>paran.com</option>
+                                                <option>yahoo.com</option>
                                             </select>
                                         </div>
                                     </div>
