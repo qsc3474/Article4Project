@@ -154,11 +154,8 @@
             	$(".deleteBtn").click(function(){
             		
             		var $parent = this.parentNode;
-            		console.log($parent);
     			    var getNo = $parent.children[0];
-    			    console.log(getNo);
     			    var no = getNo.value;
-    			    console.log(no);
     			    location.href = "${pageContext.request.contextPath}/admin/book/delete?no=" + no;
     			    
             		
