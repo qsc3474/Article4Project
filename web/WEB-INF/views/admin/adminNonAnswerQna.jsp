@@ -78,7 +78,7 @@
 							<h4 class="glyphicon"></h4>
 							<br />회원 관리
 						</a> <a
-							href="${ pageContext.servletContext.contextPath }/admin/member/list"
+							href="${ pageContext.servletContext.contextPath }/hp/report/count/list"
 							class="list-group-item text-center">
 							<h4 class="glyphicon "></h4>
 							<br /> 신고 관리
