@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>404</title>
+<title>500</title>
 <style>
         .body {
             position: relative;
@@ -33,7 +33,7 @@
 	<div id="main_content">
 		<section>
 	            <div class="section-title ht-title text-center" data-wow-duration="1000ms" data-wow-delay="0.3s">
-	                <h2>404 ERROR</h2>
+	                <h2>500 ERROR</h2>
 	                <p>
 	                    서비스 이용에 불편을 들려 죄송합니다.<br>
 	                    시스템 에러가 발생하여 페이지를 표시 할 수 없습니다.<br>

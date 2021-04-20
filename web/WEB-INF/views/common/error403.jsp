@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>403</title>
 <style>
         .body {
             position: relative;
@@ -32,9 +32,9 @@
 	<h1 align="center">요청 권한이 없는 페이지 입니다~</h1>
 	<section>
             <div class="section-title ht-title text-center" data-wow-duration="1000ms" data-wow-delay="0.3s">
-                <h2>404 ERROR</h2>
+                <h2>403 ERROR</h2>
                 <p>
-                    페이지가 존재하지 않거나 사용할 수 없는 페이지 입니다.<br>
+                    요청 권한 없는 페이지 입니다.<br>
                     입력하신 주소가 정확한지 다시 한번 확인해 주세요
                 </p>
                 <div class="errorWrap">
