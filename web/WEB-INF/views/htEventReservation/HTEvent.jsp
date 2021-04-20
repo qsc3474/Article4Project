@@ -103,9 +103,9 @@
                                         		    <label class="fieldlabels">나이<span class="text-danger">*</span></label>
 												    <select name="age" id="userPetAge" onchange="getUserPetAge()">
 												    	<option value="0" selected>나이를 선택해주세요.</option>
-                                                  	    <option value="baby">1년 이하</option>
-                                                        <option value="adult">성견/성묘</option>
-                                                        <option value="old">노견/노묘</option>
+                                                  	    <option value="1년 이하">1년 이하</option>
+                                                        <option value="성견/성묘">성견/성묘</option>
+                                                        <option value="노견/노묘">노견/노묘</option>
                                                     </select>
                                         		</li>
                                         		<!-- 중성화여부 -->
@@ -159,14 +159,14 @@
 	                                            	<select name="pets" id="stayPets" onchange="getStayPets()">
 	                                                	<option value="0" selected>투숙 Pet을 선택해주세요.</option>
 	                                                	<optgroup label=" 강아지">
-	                                                  		<option value="dog1">강아지 : 1마리</option>
-	                                                  		<option value="dog2">강아지 : 2마리</option>
-	                                                  		<option value="dog3">강아지 : 3마리</option>
+	                                                  		<option value="강아지 : 1마리">강아지 : 1마리</option>
+	                                                  		<option value="강아지 : 2마리">강아지 : 2마리</option>
+	                                                  		<option value="강아지 : 3마리">강아지 : 3마리</option>
 	                                                	</optgroup>
 	                                                	<optgroup label="고양이">
-	                                                  		<option value="cat1">고양이 : 1마리</option>
-	                                                  		<option value="cat2">고양이 : 2마리</option>
-	                                                  		<option value="cat3">고양이 : 3마리</option>
+	                                                  		<option value="고양이 : 1마리">고양이 : 1마리</option>
+	                                                  		<option value="고양이 : 2마리">고양이 : 2마리</option>
+	                                                  		<option value="고양이 : 3마리">고양이 : 3마리</option>
 	                                                	</optgroup>
 	                                            	</select> 
                                         		</li>

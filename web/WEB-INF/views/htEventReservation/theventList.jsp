@@ -80,12 +80,12 @@
                                         <tr>
                                             <td class="width45">
                                                 <label class="custom-control custom-checkbox mb-0">
-                                                    <input type="checkbox" class="custom-control-input" name="example-checkbox1" value="option1" checked="">
+                                                    <input type="checkbox" class="custom-control-input" name="example-checkbox1" value="option1">
                                                     <span class="custom-control-label">&nbsp;</span>
                                                 </label>
                                             </td>
                                             <td>
-                                               <c:out value="${ thevent.eventNo }"/>
+                                                <input type="hidden" id="no" value="<c:out value="${ htevent.eventNo }"/>"> <c:out value="${ htevent.eventNo }"/>
                                             </td>
                                             <td>
                                                 <c:out value="${ htevent.eventType }"/>
@@ -111,17 +111,17 @@
         </section>
         
  <script>
-const link = "${ pageContext.servletContext.contextPath }/ht/room/list";
+const link = "${ pageContext.servletContext.contextPath }/ht/event/list";
 
-		if(document.getElementsByTagName("td")) {
-			const $tds = document.getElementsByTagName("td");
-			for(var i = 0 ; i < $tds.length ; i++) {
-				$tds[i].onclick = function() {
-					const no = this.parentNode.children[0].innerText;
-					/* location.href = "${ pageContext.servletContext.contextPath }/ht/NTC/notice/detail?no=" + no; */   
-				}
-			}
+if(document.getElementsByTagName("td")) {
+	const $tds = document.getElementsByTagName("td");
+	for(var i = 0 ; i < $tds.length ; i++) {
+		$tds[i].onclick = function() {
+		const no = document.getElementById("no").value;
+			 location.href = "${ pageContext.servletContext.contextPath }/ht/event/detail?no="+no;    
 		}
+	}
+}
 </script>
 
 

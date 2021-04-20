@@ -46,7 +46,30 @@
 	     WHERE HT_MEM_NO = ?
 	       AND HT_EVENT_STAUS = '진행중'
 	</entry>
-	
+	<entry key="eventDetail">
+	     SELECT  
+	            A.HT_EVENT_BK_NO
+	          , A.HT_EVENT_TYPE
+	          , A.HT_ER_TIME
+	          , A.HT_ER_TIMEOUT
+	          , A.HT_PET_NO
+	          , A.HT_PET_NAME
+	          , A.HT_PET_KIND
+ 	          , A.HT_PET_GENDER
+	          , A.HT_PET_AGE
+ 	          , A.HT_PET_NEUT
+              , A.HT_BK_MESSAGE
+              , A.HT_MEM_NO
+	       FROM HOTEL_EVENT_RESERVATION A
+	      WHERE HT_EVENT_BK_NO = ?
+	</entry>
+	<entry key="eventCancel">
+         UPDATE
+                HOTEL_EVENT_RESERVATION A
+            SET A.HT_EVENT_STAUS = '취소'
+          WHERE HT_EVENT_STAUS ='진행중'
+            AND HT_EVENT_BK_NO = ?
+  </entry>
 	
 	
 	
