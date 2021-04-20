@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>관리자페이지</title>
 
  <!-- Meta Data -->
    <meta charset="utf-8">
@@ -49,7 +49,7 @@
 <jsp:include page="../common/header.jsp"></jsp:include>
 <section class="step-title pt-null">
          <div class="section-title text-center" data-wow-duration="1000ms" data-wow-delay="0.3s">
-            <h2>관리자 페이지</h2>
+            <h2>미응답 QnA 조회</h2>
          </div>
       </section>
 
@@ -59,29 +59,29 @@
 				<div class="page-submenu">
 					<div class="list-group">
 						<a
-							href="${ pageContext.servletContext.contextPath }/hp/notice/select/list"
+							href="${ pageContext.servletContext.contextPath }/admin/book/List"
 							class="list-group-item active text-center">
 							<h4 class="glyphicon glyphicon"></h4>
 							<br />예약관리
 						</a> <a
-							href="${ pageContext.servletContext.contextPath }/hp/notice/select/list"
+							href="${ pageContext.servletContext.contextPath}/admin/board"
 							class="list-group-item text-center">
 							<h4 class="glyphicon glyphicon"></h4>
 							<br />관리자 게시판 관리
 						</a> <a
-							href="${ pageContext.servletContext.contextPath }/hp/notice/select/list"
+							href="${ pageContext.servletContext.contextPath }/admin/nonAnswer/qna"
 							class="list-group-item text-center">
 							<h4 class="glyphicon glyphicon"></h4>
-							<br />Q&A 관리
-						</a> <a href="${ pageContext.servletContext.contextPath }/hp/dental"
+							<br />미응답 Q&A 관리
+						</a> <a href="${ pageContext.servletContext.contextPath }/admin/member/list"
 							class="list-group-item text-center">
 							<h4 class="glyphicon"></h4>
-							<br />리뷰 관리
+							<br />회원 관리
 						</a> <a
 							href="${ pageContext.servletContext.contextPath }/admin/member/list"
 							class="list-group-item text-center">
 							<h4 class="glyphicon "></h4>
-							<br /> 회원관리
+							<br /> 신고 관리
 						</a>
 					</div>
 				</div>
@@ -100,7 +100,7 @@
                                                                 
                                                                 <th>글 번호</th>                                    
                                                                 <th>제목</th>
-                                                                <th>내용</th>
+                                                                <th>카테고리</th>
                                                                 <th>작성일</th>                                    
                                                                 <th>작성자번호</th>                                    
                                                               
@@ -113,7 +113,7 @@
                                                                
                                                                 <td><c:out  value="${non.no }"/></td>
                                                                 <td><c:out value="${non.title }"/></td>
-                                                                <td><c:out value="${non.content }"/></td>
+                                                                <td><c:out value="${non.categoryNo }"/></td>
                                                                 <td><c:out value="${non.drawupDate }"/></td>
                                                                 <td><c:out value="${non.writer.no }"/></td>
                                                                 

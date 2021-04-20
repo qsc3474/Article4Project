@@ -145,7 +145,7 @@ public class HPBoardReportDAO {
 				count.setReportedBoard(new HPBoardDTO());
 				
 				count.setReportedBoardNo(rset.getInt("REPORT_BD_NO"));
-				count.getReportedBoard().setTitle("HP_RV_TITLE");
+				count.getReportedBoard().setTitle(rset.getString("HP_RV_TITLE"));
 				count.setCount(rset.getInt("COUNT(A.REPORT_BD_NO)"));
 				
 				reportCountList.add(count);

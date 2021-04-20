@@ -73,8 +73,6 @@
                                             <th>&nbsp;&nbsp;&nbsp;&nbsp;룸</th>
                                             <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;체크인</th>                                    
                                             <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;체크아웃</th>                                    
-                                            <th>수정/취소</th>                                    
-                                   
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -101,10 +99,6 @@
                                             <td>
                                                 <c:out value="${ htevent.timeOut }"/>
                                             </td>                                   
-                                            <td>                                            
-                                                <button type="button" class="btn btn-primary btn-sm" title="Edit"><i class="fa fa-edit"></i></button>
-                                                <button type="button" class="btn btn-danger btn-sm" title="Delete"><i class="fa fa-trash-o"></i></button>
-                                            </td>
                                         </tr>
                                         </c:forEach>
                                     </tbody>

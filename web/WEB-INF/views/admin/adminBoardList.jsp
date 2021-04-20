@@ -49,7 +49,7 @@
 <jsp:include page="../common/header.jsp"></jsp:include>
 <section class="step-title pt-null">
          <div class="section-title text-center" data-wow-duration="1000ms" data-wow-delay="0.3s">
-            <h2>예약 조회</h2>
+            <h2>관리자 게시판</h2>
          </div>
       </section>
 
@@ -64,7 +64,7 @@
 							<h4 class="glyphicon glyphicon"></h4>
 							<br />예약관리
 						</a> <a
-							href="${ pageContext.servletContext.contextPath }/admin/board"
+							href="${ pageContext.servletContext.contextPath} /admin/board"
 							class="list-group-item text-center">
 							<h4 class="glyphicon glyphicon"></h4>
 							<br />관리자 게시판 관리
@@ -73,12 +73,12 @@
 							class="list-group-item text-center">
 							<h4 class="glyphicon glyphicon"></h4>
 							<br />미응답 Q&A 관리
-						</a> <a href="${ pageContext.servletContext.contextPath }/admin/member/list"
+						</a> <a href="${ pageContext.servletContext.contextPath }/hp/report/count/list"
 							class="list-group-item text-center">
 							<h4 class="glyphicon"></h4>
 							<br />회원 관리
 						</a> <a
-							href="${ pageContext.servletContext.contextPath }/hp/report/count/list"
+							href="${ pageContext.servletContext.contextPath }/admin/member/list"
 							class="list-group-item text-center">
 							<h4 class="glyphicon "></h4>
 							<br /> 신고 관리
@@ -108,23 +108,15 @@
                                                         </thead>
                                                         <tbody>
                                                         
-                                                       <c:forEach var="book" items="${requestScope.allBookList }">                                                           <tr>
+                                                         <c:forEach var="bd" items="${requestScope.adminBoardList }">                                                           <tr>
                                                               
                                                                
-                                                                <td><c:out  value="${book.no }"/></td>
-                                                                <td><c:out value="${book.memberNo }"/></td>
-                                                                <td><c:out value="${book.time }"/></td>
-                                                                <td><c:out value="${book.petKind }"/></td>
-                                                                <td><c:out value="${book.petName }"/></td>
-                                                                <td><c:out value="${book.petAge }"/> </td>                                   
-                                                                <td><c:out value="${book.petNeut }"/></td>
-                                                                <td><c:out value="${book.message }"/></td>
-                                                                <td><c:out value="${book.status }"/></td>
-                                                                <td>
-                                                                    <input type="hidden"  name="no" value="${book.no }" >                                          
-                                                                    <button type="submit" class="btn btn-primary btn-sm" title="Edit" ><i class="fa fa-edit"></i></button>
-                                                                    <button type="button" class="btn btn-danger btn-sm deleteBtn" title="Delete" id="deleteBook"><i class="fa fa-trash-o" > </i></button>
-                                                                </td>
+                                                                <td><c:out  value="${bd.no }"/></td>
+                                                                <td><c:out value="${bd.title }"/></td>
+                                                                <td><c:out value="${bd.content }"/></td>
+                                                                <td><c:out value="${bd.drawupDate }"/></td>
+                                                                <td><c:out value="${bd.writer.no }"/></td>
+                                                                
                                                             </tr>
                                                             <tr>
                                                             

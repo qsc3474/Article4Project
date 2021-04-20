@@ -21,7 +21,7 @@ thead{border-top: 2px solid #FDC647 !important;}
 	<section class="step-title bg-white">
 		<div class="section-title ht-title text-center"
 			data-wow-duration="1000ms" data-wow-delay="0.3s">
-			<h2>호텔 이용후기</h2>
+			<h2>병원 이용후기</h2>
 			<h3 class="text-center pb"><span class="underline--magical" style="font-size:24px;">베스트 후기</span> </h3>
 		</div>
 	</section>

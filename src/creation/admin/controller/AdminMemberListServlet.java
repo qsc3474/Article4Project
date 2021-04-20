@@ -30,6 +30,9 @@ public class AdminMemberListServlet extends HttpServlet {
 		if(!allMemberList.isEmpty()) {
 			path="/WEB-INF/views/admin/adminMemberList.jsp";
 			request.setAttribute("allMemberList", allMemberList);
+		}else {
+			path="/WEB-INF/views/admin/adminMemberList.jsp";
+			request.setAttribute("allMemberList", allMemberList);
 		}
 		
 

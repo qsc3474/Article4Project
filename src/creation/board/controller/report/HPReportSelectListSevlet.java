@@ -27,7 +27,7 @@ public class HPReportSelectListSevlet extends HttpServlet {
 		String path = "";
 		if(!reportList.isEmpty()) {
 			
-			path = "신고리스트를 뿌려줄 화면 경로";
+			path = "";
 			request.setAttribute("reportList", reportList);
 			
 		} else {

@@ -31,6 +31,9 @@ public class AdminBookListServlet extends HttpServlet {
 		if(!allBookList.isEmpty()) {
 			path="/WEB-INF/views/admin/adminBookList.jsp";
 			request.setAttribute("allBookList", allBookList);
+		}else {
+			path="/WEB-INF/views/admin/adminBookList.jsp";
+			request.setAttribute("allBookList", allBookList);
 		}
 		
 
@@ -42,8 +45,6 @@ public class AdminBookListServlet extends HttpServlet {
 	}
 
 	
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	
-	}
 
 }
