@@ -162,12 +162,12 @@
 		
 		          <div class="col-md-3">
 		            <div class="feature-box-one wow fadeInUp" data-wow-delay="0.4s">
-		              <img src="${ pageContext.servletContext.contextPath }/resources/media/img/partyRoom04.jpg" alt="" style="width: 100%;">
+		              <img src="${ pageContext.servletContext.contextPath }/resources/media/img/studio02.jpg" alt="" style="width: 100%;">
 		            </div>
 		          </div>
 		          <div class="col-md-3">
 		            <div class="feature-box-one wow fadeInUp" data-wow-delay="0.4s">
-		              <img src="${ pageContext.servletContext.contextPath }/resources/media/img/party03.jpeg" alt="" style="width: 100%;">
+		              <img src="${ pageContext.servletContext.contextPath }/resources/media/img/partyRoom06.jpeg" alt="" style="width: 100%;">
 		            </div>
 		          </div>
 		          <div class="col-md-3">

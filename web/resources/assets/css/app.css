@@ -4670,8 +4670,7 @@ display:block;
 
 /* ===title=== */
 .ht-title  {padding-top: 50px; margin-bottom: 0;}
-.ht-title h2 {
-  color: #FDC647;}
+.ht-title h2 { color: #FDC647;}
 
 .ht-title h2:after {
   background: #FDC647;
@@ -4726,10 +4725,12 @@ display:block;
 .mb{margin-bottom: 70px;}
 .mt{margin-top: 50px;}
 .pt{padding-top: 50px;}
+.pt-big{padding-top: 100px;}
 .pb{padding-bottom: 30px;}
 .bg-light{background: #E5E9ED !important;}
 .mt-null{margin-top: 0 !important;}
 .pt-null{padding-top: 0 !important;}
+.pb-null{padding-bottom: 0 !important;}
 .fm {font-size: 22px !important;}
 .p-null {padding: 0 !important;}
 .m-null {margin: 0 !important;}

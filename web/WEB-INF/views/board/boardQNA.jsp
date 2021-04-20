@@ -161,7 +161,7 @@ thead {
 
 								<form id="searchForm"
 									action="${ pageContext.servletContext.contextPath }/hp/info/search/list"
-									method="get" style="padding-top:20px">
+									method="get" style="padding-top:20px;">
 									<div class="search-area" align="center">
 										<c:choose>
 											<c:when test="${ !empty requestScope.searchValue }">

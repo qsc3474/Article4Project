@@ -23,23 +23,26 @@
     <script src="/creation/resources/js/event.js"></script>
     <link rel="stylesheet" href="/creation/resources/css/common2.css">
     <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
-	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-    <script src="/creation/resources/js/event.js"></script>
+<style>
+thead {
+	border-top: 2px solid #FDC647 !important;
+}
+</style>
 </head>
 <body>
 	<jsp:include page="/WEB-INF/views/hotel/common/header.jsp"/>
- <section class="title-sec">
-    <div class="row">
-        <h2 class="section-title section-title-upper section-title-line text-center">
-            QNA
-        </h2>
-    </div>
- </section>
-<section class="notice-sec">
-    <div class="container">
-     <div class="col-lg-2">
-            <aside class="page-submenu">
+<!-- title -->
+		    <section class="bg-white pb-null pt-big">
+		      <div class="section-title ht-title text-center" data-wow-duration="1000ms" data-wow-delay="0.3s">
+		        <h2>Q &amp; A</h2>
+		        <p>개편한 세상의 새로운 소식들과 유용한 정보들을 한곳에서 확인하세요.</p>
+		      </div>
+		    </section>
+		    <!-- /title -->
+	<section class="notice-sec bg-white pt-null">
+	    <div class="container">
+	     <div class="col-lg-2">
+            <aside class="page-submenu mt-null">
                 <ul>
                     <li>
                         <a href="${ pageContext.servletContext.contextPath }/ht/NTC/notice/list" class="active">
@@ -59,18 +62,6 @@
                             <i class="fas fa-chevron-right"></i>
                         </a>
                     </li>
-                    <li>
-                        <a href="#">
-                            <span>갤러리</span>
-                            <i class="fas fa-chevron-right"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span>사용후기</span>
-                            <i class="fas fa-chevron-right"></i>
-                        </a>
-                    </li>
                 </ul>
             </aside>
         </div>
@@ -78,22 +69,22 @@
         <div id="page-wrapper">
             <div id="page-inner">
                 <div class="row">
-                    <div class="col-lg-12">
-                        <h1 class="page-header app-title">
-                            개편한 세상의 새로운 소식들과 유용한 정보들을 한곳에서 확인하세요.
-                        </h1>
-                    </div>
-                </div> 
-                <div class="row">
                     <div class="col-md-12">
                         
       <!-- train section -->
-      <div class="bhoechie-tab-content col-md-12"> 
+      <div class="col-md-12"> 
            <h2 style="margin-top: 0;color:#F2B138" class="pt pb hide">F&amp;Q</h2>
-          	 <div class="col-md-12 mb">
-            	  <div class="card-body">
-                            <div class="table-responsive table_e2">
-                                <table class="table table-hover table-vcenter text-nowrap mb-0">
+          	 <div class="col-md-12 mb ">
+            	  <div class="card-body ">
+                            <div class="panel panel-default panel-wrap">
+                                <table class="table table-hover table-bordered">
+                                <colgroup>
+			                                <col width="10%">
+			                                <col width="55%">
+			                                <col width="10%">
+			                                <col width="15%">
+			                                <col width="10%">
+		                           		</colgroup>
                                     <thead>
                                         <tr>
 	                                        <th>번호</th>                                    
@@ -130,7 +121,7 @@
   		   </div><!-- train section and -->
   		   
         <%-- 페이지 처리 --%>
-         <div class="pagingArea" align="center">
+         <div class="pagingArea" align="center" style="margin-top: 50px; padding-top:10px;">
 			<c:choose>
 				<c:when test="${ !empty requestScope.searchValue }">
 					<button id="searchStartPage"> << </button>
@@ -192,18 +183,8 @@
 				</c:otherwise>
 			</c:choose>
 		</div> <!-- pagingArea end --> 
-            		
-                </div>
-             </div>
-           </div>
-        </div>
-    </div> <!-- pagingArea end --> 
-   					<%--  <c:if test="${ sessionScope.loginMember.kind eq 'M'}">
-						<button id="writeQNA">작성하기</button>			
-					</c:if> --%>
-    
-<!-- 검색 폼 -->
-		<form id="searchForm" action="${ pageContext.servletContext.contextPath }/ht/QNA/search" method="get">
+            		<!-- 검색 폼 -->
+		<form id="searchForm" action="${ pageContext.servletContext.contextPath }/ht/QNA/search" method="get" style="padding-top:20px;">
 			<div class="search-area" align="center">
 				<c:choose>
 					<c:when test="${ !empty requestScope.searchValue }">
@@ -223,12 +204,20 @@
 						<input type="search" id="searchValue" name="searchValue">
 					</c:otherwise>
 				</c:choose>
-				<button type="submit">검색하기</button>
+				<button type="submit" class="gp-btn btn-dark center" style="border:0; padding: 7px 18px;">검색하기</button>
 				<c:if test="${ !empty sessionScope.loginMember }">
 					<button type="button" id="writeQNA">작성하기</button>
 				</c:if>
 			</div>
 		</form>
+                </div>
+             </div>
+           </div>
+        </div>
+    </div> <!-- pagingArea end --> 
+   					<%--  <c:if test="${ sessionScope.loginMember.kind eq 'M'}">
+						<button id="writeQNA">작성하기</button>			
+					</c:if> --%>
     </div>  
     
 </section>

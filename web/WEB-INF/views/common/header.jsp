@@ -5,17 +5,13 @@
 <html>
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>index</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <link rel="apple-touch-icon" sizes="180x180" href="${ pageContext.servletContext.contextPath }/resources/assets/img/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="16x16" href="${ pageContext.servletContext.contextPath }/resources/assets/img/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="${ pageContext.servletContext.contextPath }/resources/assets/img/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="${ pageContext.servletContext.contextPath }/resources/assets/img/favicon-16x16.png">
+<title>index</title>
 
-<link rel="apple-touch-icon" sizes="180x180"
-	href="${ pageContext.servletContext.contextPath }/resources/assets/img/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32"
-	href="${ pageContext.servletContext.contextPath }/resources/assets/img/favicon.png">
 <!-- Dependency Styles -->
 <link rel="stylesheet" href="${ pageContext.servletContext.contextPath }/resources/dependencies/bootstrap/css/bootstrap.min.css" type="text/css">
 <link rel="stylesheet" href="${ pageContext.servletContext.contextPath }/resources/dependencies/font-awesome/css/font-awesome.min.css" type="text/css">
@@ -30,7 +26,11 @@
 <link rel="stylesheet" href="${ pageContext.servletContext.contextPath }/resources/dependencies/magnific-popup/magnific-popup.css" type="text/css">
 <!-- Site Stylesheet -->
 <link rel="stylesheet" href="${ pageContext.servletContext.contextPath }/resources/assets/css/app.css" type="text/css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="https://cdn.sobekrepository.org/includes/jquery-rotate/2.2/jquery-rotate.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
 <script src="/creation/resources/js/event.js"></script>
+
 </head>
 <body id="home-version-1" class="home-version-1 sticky-header transparent-header menu-two" data-style="default">
 

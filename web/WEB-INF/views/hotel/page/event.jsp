@@ -1,133 +1,152 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>이벤트</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script src="https://cdn.sobekrepository.org/includes/jquery-rotate/2.2/jquery-rotate.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
 
-<style>
-html, body, button {
-	font-family: Arial, "돋움", Dotum, "굴림", Gulim, "Apple SD Gothic Neo",
-		AppleGothic, sans-serif;
-}
+<!-- Dependency Styles -->
+<link rel="stylesheet" href="${ pageContext.servletContext.contextPath }/resources/dependencies/bootstrap/css/bootstrap.min.css" type="text/css">
+<link rel="stylesheet" href="${ pageContext.servletContext.contextPath }/resources/dependencies/font-awesome/css/font-awesome.min.css" type="text/css">
+<link rel="stylesheet" href="${ pageContext.servletContext.contextPath }/resources/dependencies/font-awesome/css/gp-icons.css" type="text/css">
+<link rel="stylesheet" href="${ pageContext.servletContext.contextPath }/resources/dependencies/gp-icons/style.css" type="text/css">
+<!-- <link rel="stylesheet" href="dependencies/etlinefont-bower/style.css" type="text/css"> -->
+<link rel="stylesheet" href="${ pageContext.servletContext.contextPath }/resources/dependencies/bootstrap-star-rating/css/star-rating.min.css" type="text/css">
+<link rel="stylesheet" href="${ pageContext.servletContext.contextPath }/resources/dependencies/swiper/css/swiper.min.css" type="text/css">
+<link rel="stylesheet" href="${ pageContext.servletContext.contextPath }/resources/dependencies/wow/animate.css" type="text/css">
+<link rel="stylesheet" href="${ pageContext.servletContext.contextPath }/resources/dependencies/jquery-ui/css/jquery-ui.css" type="text/css">
+<link rel="stylesheet" href="${ pageContext.servletContext.contextPath }/resources/dependencies/revslider/css/settings.css" type="text/css">
+<link rel="stylesheet" href="${ pageContext.servletContext.contextPath }/resources/dependencies/magnific-popup/magnific-popup.css" type="text/css">
+<!-- Site Stylesheet -->
+<link rel="stylesheet" href="${ pageContext.servletContext.contextPath }/resources/assets/css/app.css" type="text/css">
 
-button {
-	border: 0;
-	margin: 0;
-	padding: 0;
-}
+ <style>
+    html,
+    body,
+    button {
+      font-family: Arial, "돋움", Dotum, "굴림", Gulim, "Apple SD Gothic Neo", AppleGothic, sans-serif;
+    }
 
-.title {
-	margin-top: 50px;
-	text-align: center;
-}
+    button {
+      border: 0;
+      margin: 0;
+      padding: 0;
+    }
 
-.box-roulette {
-	position: relative;
-	margin: 50px auto;
-	width: 500px;
-	height: 500px;
-	border: 10px solid #ccc;
-	border-radius: 50%;
-	background: #ccc;
-	overflow: hidden;
-}
+    .title {
+      margin-top: 50px;
+      text-align: center;
+    }
 
-.box-roulette .markers {
-	position: absolute;
-	left: 50%;
-	top: 0;
-	margin-left: -25px;
-	width: 0;
-	height: 0;
-	border: 25px solid #fff;
-	border-left-color: transparent;
-	border-right-color: transparent;
-	border-bottom-color: transparent;
-	z-index: 9999;
-}
+    .box-roulette {
+      position: relative;
+      margin: 50px auto;
+      width: 500px;
+      height: 500px;
+      border: 10px solid #ccc;
+      border-radius: 50%;
+      background: #ccc;
+      overflow: hidden;
+    }
 
-.box-roulette .roulette {
-	position: relative;
-	width: 100%;
-	height: 100%;
-	overflow: hidden;
-}
+    .box-roulette .markers {
+      position: absolute;
+      left: 50%;
+      top: 0;
+      margin-left: -25px;
+      width: 0;
+      height: 0;
+      border: 25px solid #fff;
+      border-left-color: transparent;
+      border-right-color: transparent;
+      border-bottom-color: transparent;
+      z-index: 9999;
+    }
 
-.box-roulette .item {
-	position: absolute;
-	top: 0;
-	width: 0;
-	height: 0;
-	border: 0 solid transparent;
-	transform-origin: 0 100%;
-}
+    .box-roulette .roulette {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
 
-.box-roulette .label {
-	position: absolute;
-	left: 0;
-	top: 0;
-	color: #fff;
-	white-space: nowrap;
-	transform-origin: 0 0;
-}
+    .box-roulette .item {
+      position: absolute;
+      top: 0;
+      width: 0;
+      height: 0;
+      border: 0 solid transparent;
+      transform-origin: 0 100%;
+    }
 
-.box-roulette .label .text {
-	display: inline-block;
-	font-size: 20px;
-	font-weight: bold;
-	line-height: 1;
-	vertical-align: middle;
-}
+    .box-roulette .label {
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: #fff;
+      white-space: nowrap;
+      transform-origin: 0 0;
+    }
 
-#btn-start {
-	display: block;
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	margin: -50px 0 0 -50px;
-	width: 100px;
-	height: 100px;
-	font-weight: bold;
-	background: #fff;
-	border-radius: 50px;
-	z-index: 9999;
-	cursor: pointer;
-}
-</style>
+    .box-roulette .label .text {
+      display: inline-block;
+      font-size: 20px;
+      font-weight: bold;
+      line-height: 1;
+      vertical-align: middle;
+    }
 
-
+    #btn-start {
+      display: block;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin: -50px 0 0 -50px;
+      width: 100px;
+      height: 100px;
+      font-weight: bold;
+      background: #fff;
+      border-radius: 50px;
+      z-index: 9999;
+      cursor: pointer;
+    }
+  </style>
 </head>
-<body id="home-version-1"
-	class="home-version-1 sticky-header transparent-header menu-two"
-	data-style="default">
-
-	<jsp:include page="/WEB-INF/views/common/header.jsp"></jsp:include>
-
-	<div id="main_content">
-
-		<section class="step-title">
-			<div class="section-title ht-title text-center"
-				data-wow-duration="1000ms" data-wow-delay="0.3s">
-				<h2>이벤트</h2>
-				<p>통합회원가입</p>
-				<P style="font-size: 15px; margin-top: 20px;">
-					100% 당첨 이벤트<br> 호텔예약 시 행운의 기회가 찾아옵니다.
-				</P>
-			</div>
-		</section>
-
-		<!-- 이벤트섹션 -->
-		<!-- 이벤트섹션 -->
-		<section id="event-page">
-			<div class="container">
-				<div class="box-roulette" style="margin-top: 200px;">
-					<div class="markers"></div>
-					<button type="button" id="btn-start">GO GO</button>
-					<div class="roulette" id="roulette"></div>
-				</div>
-				<script>
+<body id="home-version-1" class="home-version-1 sticky-header transparent-header menu-two" data-style="default">
+	
+	<jsp:include page="/WEB-INF/views/hotel/common/header.jsp"></jsp:include>
+	
+		<div id="main_content">
+		
+			 <section class="step-title">
+      <div class="section-title ht-title text-center" data-wow-duration="1000ms" data-wow-delay="0.3s">
+          <h2>이벤트</h2>
+          <p>
+              통합회원가입
+          </p>
+          <P style="font-size: 15px; margin-top: 20px;">100% 당첨 이벤트<br>
+              호텔예약 시 행운의 기회가 찾아옵니다. </P>
+      </div>
+    </section>
+    
+    <!-- 이벤트섹션 -->
+    <section id="event-page">
+      <div class="container">
+        <div class="box-roulette" style="margin-top: 200px;">
+          <div class="markers"></div>
+          <button type="button" id="btn-start">
+            GO GO
+          </button>
+          <div class="roulette" id="roulette"></div>
+        </div>
+      </div>
+    </section>
+            <script>
           (function ($) {
             $.fn.extend({
 
@@ -285,17 +304,8 @@ button {
 
           });
         </script>
-			</div>
-		</section>
-
-
-
-	</div>
-
-	<!-- Site Scripts -->
-	<script src="assets/js/smooth_scroll.min.js"></script>
-	<script src="assets/js/app.js"></script>
-
+</div>
+	
 	<jsp:include page="/WEB-INF/views/common/footer.jsp"></jsp:include>
 </body>
 </html>

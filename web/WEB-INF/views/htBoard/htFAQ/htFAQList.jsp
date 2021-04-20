@@ -28,17 +28,18 @@
 </head>
 <body>
 <jsp:include page="/WEB-INF/views/hotel/common/header.jsp"/>
-	 <section class="title-sec">
-	    <div class="row">
-	        <h2 class="section-title section-title-upper section-title-line text-center">
-	            FAQ
-	        </h2>
-	    </div>
-	 </section>
-	<section class="notice-sec">
+	 <!-- title -->
+		    <section class="bg-white pb-null">
+		      <div class="section-title ht-title text-center" data-wow-duration="1000ms" data-wow-delay="0.3s">
+		        <h2>FAQ</h2>
+		        <p>개편한 세상의 새로운 소식들과 유용한 정보들을 한곳에서 확인하세요.</p>
+		      </div>
+		    </section>
+		    <!-- /title -->
+	<section class="notice-sec bg-white pt-null">
 	    <div class="container">
 	     	<div class="col-lg-2">
-	            <aside class="page-submenu">
+	            <aside class="page-submenu mt-null">
 	                <ul>
 	                    <li>
 	                        <a href="${ pageContext.servletContext.contextPath }/ht/NTC/notice/list" class="active">
@@ -58,18 +59,6 @@
 	                            <i class="fas fa-chevron-right"></i>
 	                        </a>
 	                    </li>
-	                    <li>
-	                        <a href="#">
-	                            <span>갤러리</span>
-	                            <i class="fas fa-chevron-right"></i>
-	                        </a>
-	                    </li>
-	                    <li>
-	                        <a href="#">
-	                            <span>사용후기</span>
-	                            <i class="fas fa-chevron-right"></i>
-	                        </a>
-	                    </li>
 	                </ul>
 	            </aside>
 	        </div>
@@ -78,9 +67,6 @@
 		            <div id="page-inner">
 		                <div class="row">
 		                    <div class="col-lg-12">
-		                        <h1 class="page-header app-title">
-		                            개편한 세상의 새로운 소식들과 유용한 정보들을 한곳에서 확인하세요.
-		                        </h1>
 		                    </div>
 		                </div>
 		                

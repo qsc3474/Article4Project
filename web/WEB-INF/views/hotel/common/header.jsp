@@ -4,56 +4,30 @@
 <!DOCTYPE html>
 <html>
 <head>
+<!-- Meta Data -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <title>호텔헤더</title>
-<link rel="apple-touch-icon" sizes="180x180"
-	href="${ pageContext.servletContext.contextPath }/resources/assets/img/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="16x16"
-	href="${ pageContext.servletContext.contextPath }/resources/assets/img/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32"
-	href="${ pageContext.servletContext.contextPath }/resources/assets/img/favicon-32x32.png">
 <!-- Dependency Styles -->
-<link rel="stylesheet"
-	href="${ pageContext.servletContext.contextPath }/resources/dependencies/bootstrap/css/bootstrap.min.css"
-	type="text/css">
-<link rel="stylesheet"
-	href="${ pageContext.servletContext.contextPath }/resources/dependencies/font-awesome/css/font-awesome.min.css"
-	type="text/css">
-<link rel="stylesheet"
-	href="${ pageContext.servletContext.contextPath }/resources/dependencies/font-awesome/css/gp-icons.css"
-	type="text/css">
-<link rel="stylesheet"
-	href="${ pageContext.servletContext.contextPath }/resources/dependencies/gp-icons/style.css"
-	type="text/css">
+<link rel="stylesheet" href="${ pageContext.servletContext.contextPath }/resources/dependencies/bootstrap/css/bootstrap.min.css" type="text/css">
+<link rel="stylesheet" href="${ pageContext.servletContext.contextPath }/resources/dependencies/font-awesome/css/font-awesome.min.css" type="text/css">
+<link rel="stylesheet" href="${ pageContext.servletContext.contextPath }/resources/dependencies/font-awesome/css/gp-icons.css" type="text/css">
+<link rel="stylesheet" href="${ pageContext.servletContext.contextPath }/resources/dependencies/gp-icons/style.css" type="text/css">
 <!-- <link rel="stylesheet" href="dependencies/etlinefont-bower/style.css" type="text/css"> -->
-<link rel="stylesheet"
-	href="${ pageContext.servletContext.contextPath }/resources/dependencies/bootstrap-star-rating/css/star-rating.min.css"
-	type="text/css">
-<link rel="stylesheet"
-	href="${ pageContext.servletContext.contextPath }/resources/dependencies/swiper/css/swiper.min.css"
-	type="text/css">
-<link rel="stylesheet"
-	href="${ pageContext.servletContext.contextPath }/resources/dependencies/wow/animate.css"
-	type="text/css">
-<link rel="stylesheet"
-	href="${ pageContext.servletContext.contextPath }/resources/dependencies/jquery-ui/css/jquery-ui.css"
-	type="text/css">
-<link rel="stylesheet"
-	href="${ pageContext.servletContext.contextPath }/resources/dependencies/revslider/css/settings.css"
-	type="text/css">
-<link rel="stylesheet"
-	href="${ pageContext.servletContext.contextPath }/resources/dependencies/magnific-popup/magnific-popup.css"
-	type="text/css">
+<link rel="stylesheet" href="${ pageContext.servletContext.contextPath }/resources/dependencies/bootstrap-star-rating/css/star-rating.min.css" type="text/css">
+<link rel="stylesheet" href="${ pageContext.servletContext.contextPath }/resources/dependencies/swiper/css/swiper.min.css" type="text/css">
+<link rel="stylesheet" href="${ pageContext.servletContext.contextPath }/resources/dependencies/wow/animate.css" type="text/css">
+<link rel="stylesheet" href="${ pageContext.servletContext.contextPath }/resources/dependencies/jquery-ui/css/jquery-ui.css" type="text/css">
+<link rel="stylesheet" href="${ pageContext.servletContext.contextPath }/resources/dependencies/revslider/css/settings.css" type="text/css">
+<link rel="stylesheet" href="${ pageContext.servletContext.contextPath }/resources/dependencies/magnific-popup/magnific-popup.css" type="text/css">
 <!-- Site Stylesheet -->
-<link rel="stylesheet"
-	href="${ pageContext.servletContext.contextPath }/resources/assets/css/app.css"
-	type="text/css">
+<link rel="stylesheet" href="${ pageContext.servletContext.contextPath }/resources/assets/css/app.css" type="text/css">
+
 <script src="/creation/resources/js/event.js"></script>
 </head>
-<body id="home-version-1"
-	class="home-version-1 sticky-header transparent-header menu-two"
-	data-style="default">
+
+<body id="home-version-1" class="home-version-1 sticky-header transparent-header menu-two" data-style="default">
 
 	<!-- header -->
 	<header id="discohead" class="dt-header fixed">
@@ -76,7 +50,7 @@
 						<ul class="sub-menu">
 							<li><a href="${ pageContext.servletContext.contextPath }/ht/service">서비스 프로그램</a></li>
 							<li><a href="${ pageContext.servletContext.contextPath }/ht/package">피키지 프로그램</a></li>
-							<li><a href="event.html">이벤트</a></li>
+							<li><a href="${ pageContext.servletContext.contextPath }/ht/event">이벤트</a></li>
 						</ul></li>
 					<li class="menu-item-has-children"><a href="booking.html">예약하기</a>
 						<ul class="sub-menu">
@@ -94,9 +68,8 @@
 								href="${ pageContext.servletContext.contextPath }/ht/FAQ/list">FAQ</a></li>
 							<li><a
 								href="${ pageContext.servletContext.contextPath }/ht/QNA/list">Q&amp;A</a></li>
-							<li><a href="reviewList.html">이용후기</a></li>
-							<li><a href="${ pageContext.servletContext.contextPath }/ht/gallery/list">gallery</a></li>
-						</ul></li>
+						</ul>
+					</li>
 				</ul>
 				<c:if test="${ empty sessionScope.loginMember }">
 					<div class="secondary-navigation pull-right">

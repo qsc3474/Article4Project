@@ -57,7 +57,7 @@
 		<div id="main_content">
 		
 			<!-- title -->
-		    <section class="step-title bg-white mt">
+		    <section class="step-title bg-white">
 		      <div class="section-title ht-title text-center mb-null" data-wow-duration="1000ms" data-wow-delay="0.3s">
 		        <h2>패키지</h2>
 		      </div>
@@ -82,9 +82,6 @@
 		                  <li>펫 메뉴 1종</li>
 		                  <li>생일선물제공</li>
 		                </ul>
-		                <div class="text-center">
-		                  <a href="booking.html" target="_self" title="" class="gp-btn btn-dark medium btn-bradius">예약하기</a>
-		                </div>
 		              </div>
 		            </div>
 		          </div>
@@ -104,9 +101,6 @@
 		                  <li>앨범제공</li>
 		                  <li>펫간식제공</li>
 		                </ul>
-		                <div class="text-center">
-		                  <a href="booking.html" target="_self" title="" class="gp-btn btn-dark medium btn-bradius">예약하기</a>
-		                </div>
 		              </div>
 		            </div>
 		          </div>
@@ -126,9 +120,6 @@
 		                  <li>페어링 세트메뉴</li>
 		                  <li>탄산스파</li>
 		                </ul>
-		                <div class="text-center">
-		                  <a href="booking.html" target="_self" title="" class="gp-btn btn-dark medium btn-bradius">예약하기</a>
-		                </div>
 		              </div>
 		            </div>
 		          </div>

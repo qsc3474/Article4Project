@@ -222,7 +222,7 @@
 					<p>개편한세상 병원은 개편한 호텔과 함께 운영 되고 있습니다.</p>
 				</div>
 				<div class="cta-btncontainer-two">
-					<a href="event.html" target="_self" title=""
+					<a href="${ pageContext.servletContext.contextPath }/ht/event" target="_self" title=""
 						class="gp-btn btn-dark medium btn-bradius">이벤트 보러가기</a>
 				</div>
 			</div>
@@ -415,8 +415,8 @@
 				<ul>
 					<li><a href="${ pageContext.servletContext.contextPath }/ht/room/insert" class="quick">호텔예약</a><span><i class="glyphicon glyphicon-calendar"></i></span></li>
 					<li><a href="${ pageContext.servletContext.contextPath }/ht/package" class="quick">호텔패키지</a><span><i class="glyphicon glyphicon-th"></i></span></li>
-					<li><a href="${ pageContext.servletContext.contextPath }/ht/service" class="quick">호텔서비스</a><span><i class="glyphicon glyphicon-check"></i></span></li>
-					<li><a href="${ pageContext.servletContext.contextPath }/ht/NTC/notice/list" class="quick">공지사항</a><span><i class="glyphicon glyphicon-pencil"></i></span></li>
+					<li><a href="${ pageContext.servletContext.contextPath }" class="quick">병원사이트</a><span><i class="glyphicon glyphicon-check"></i></span></li>
+				  <li><a href="${ pageContext.servletContext.contextPath }/ht/main" class="quick">호텔사이트</a><span><i class="glyphicon glyphicon-pencil"></i></span></li>
 				</ul>
 			</nav>
 		</section>
