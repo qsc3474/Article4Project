@@ -118,5 +118,34 @@ private final MemberDAO memberDAO;
 		return memberId;	
 	}
 
+	public MemberDTO memberpwd(MemberDTO mem) {
+		Connection con = getConnection();
+		
+		MemberDTO memberPwd = memberDAO.memberPwd(con, mem);
+		System.out.println(memberPwd);
+		
+		close(con);
+		return memberPwd;
+	}
 
-}
+	public int pwdUpdate(MemberDTO mem) {
+		Connection con = getConnection();
+		
+		int result = memberDAO.pwdUpdate(con, mem);
+		
+		if(result > 0) {
+			
+			commit(con);
+			
+		} else {
+			
+			rollback(con);
+			
+		}
+		
+		return result;	
+	}		
+	}
+
+
+

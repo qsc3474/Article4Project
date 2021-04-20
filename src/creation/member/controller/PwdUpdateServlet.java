@@ -1,5 +1,6 @@
 package creation.member.controller;
 
+
 import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -10,39 +11,38 @@ import javax.servlet.http.HttpServletResponse;
 import creation.member.model.dto.MemberDTO;
 import creation.member.model.service.MemberService;
 
-
-@WebServlet("/member/idFind")
-public class MemberIdFindServlet extends HttpServlet {
+/**
+ * Servlet implementation class PwdUpdateServlet
+ */
+@WebServlet("/member/pwd")
+public class PwdUpdateServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
-
+       
+    
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-		String path = "/WEB-INF/views/member/memberIdFInd.jsp";
-		request.getRequestDispatcher(path).forward(request, response);
 	}
 
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	String name = request.getParameter("name");
-	String email = request.getParameter("email");
 	
-	System.out.println(name);
-	System.out.println(email);
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	int no = Integer.valueOf(request.getParameter("no"));
+	String pwd = request.getParameter("pwd");		
 	
 	MemberDTO mem = new MemberDTO();
-	mem.setName(name);
-	mem.setEmail(email);
-	MemberService memberService = new MemberService();
-	MemberDTO memberId = memberService.memberId(mem);
+	mem.setNo(no);
+	mem.setPwd(pwd);
 	
-	String path = "";
-	if(memberId !=null) {
-		path = "/WEB-INF/views/member/idFindResult.jsp";
-		request.setAttribute("memberId",memberId);
+	MemberService memberService = new MemberService();
+	
+	int result = memberService.pwdUpdate(mem);
+	
+	String path="";
+	if(result>0) {
+		path="/WEB-INF/views/main/main.jsp";
+		
 	}else {
+		
 	}
 	request.getRequestDispatcher(path).forward(request, response);
 	}
 
 }
-

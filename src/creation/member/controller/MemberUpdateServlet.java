@@ -31,12 +31,14 @@ public class MemberUpdateServlet extends HttpServlet {
 		int phone = Integer.valueOf(request.getParameter("tel1") + request.getParameter("tel2") + request.getParameter("tel3"));
 		String address = request.getParameter("address1") + "$" + request.getParameter("address2")
         					+ "$" + request.getParameter("address3");
+		String pwd = request.getParameter("pwd");
 		
 		MemberDTO updateData = new MemberDTO();
 		updateData.setNo(no);
 		updateData.setAddress(address);
 		updateData.setPhone(phone);
 		updateData.setEmail(email);
+		updateData.setPwd(pwd);
 		
 		int result = new MemberService().updateMember(updateData);
 		
@@ -50,6 +52,7 @@ public class MemberUpdateServlet extends HttpServlet {
 			updateMember.setAddress(address);
 			updateMember.setPhone(phone);
 			updateMember.setEmail(email);
+			updateMember.setPwd(pwd);
 			
 			loginMember.setAttribute("loginMember", updateMember);
 			
