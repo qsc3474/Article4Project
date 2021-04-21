@@ -100,7 +100,23 @@
 	            $(document).on('click', '#btnList', function (e) {
 	
 	                e.preventDefault();
-	                location.href = "${pageContext.request.contextPath}/board/getBoardList";
+	                if(${ requestScope.categoryNo eq 'HP_RV' }){
+	                	
+	                	location.href = "${pageContext.request.contextPath}/hp/review/select/list";
+	                	
+	                } else if(${ requestScope.categoryNo eq 'HP_NTC' }){
+	                	
+	                	location.href = "${pageContext.request.contextPath}/hp/notice/select/list";
+	                	
+	                } else if(${ requestScope.categoryNo eq 'HP_QNA' }){
+	                	
+	                	location.href = "${pageContext.request.contextPath}/hp/qna/select/list";
+	                	
+	                } else if(${ requestScope.categoryNo eq 'HP_FAQ' }){
+	                	
+	                	location.href = "${pageContext.request.contextPath}/hp/faq/select/list";
+	                	
+	                }
 	
 	            });
 	            
