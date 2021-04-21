@@ -252,41 +252,41 @@ tbody {
 		</div>
 	</div>
 	<!-- 신고 팝업창 -->
-	<div id="pop-up">
-		<div class="pop" id="report-pop-up">
-			<div class="pop-up-box small-6 large-centered">
-				<a href="#" class="report-close-button close-button">&#10006;</a>
-				<div class="mb-12">
-					<form
-						action="${ pageContext.servletContext.contextPath }/hp/board/report"
-						method="POST" id="reportForm" name="reportForm">
-						<label for="title">신고사유</label> <select
-							class="custom-select mr-sm-2" name="reportCategory"
-							id="reportCategory" onchange="reportCategoryChanged(this.value)">
-							<option value="def" selected>--</option>
-							<option value="a1">욕설 및 부적절한 언어 사용</option>
-							<option value="i2">광고성 게시글 작성</option>
-							<option value="r3">음란물 업로드</option>
-							<option value="s4">회원들간의 분쟁 조장</option>
-							<option value="m5">기타</option>
-						</select> <input type="hidden" value="${ requestScope.board.no }"
-							id="reportBoardNo" name="reportBoardNo"> <input
-							type="hidden" value="${ requestScope.board.categoryNo }"
-							id="reportBoardCategory" name="reportBoardCategory"> <input
-							type="hidden" value="${ sessionScope.loginMember.no }"
-							id="reporterMemberNo" name="reporterMemberNo"> <input
-							type="hidden" value="${ requestScope.board.memberNo }"
-							id="reportWriterNo" name="reportWriterNo">
-						<textarea class="form-control" rows="3" name="reportContent"
-							id="reportContent" style="display: none;"
-							placeholder="신고 사유를 입력해 주세요"></textarea>
-						<button type="button" id="reportSubmitButton"
-							class="gp-btn btn-primary">신고접수</button>
-					</form>
-				</div>
-			</div>
-		</div>
-	</div>
+   <div id="pop-up">
+      <div class="pop" id="report-pop-up" style="border: 1px solid #ccc;">
+         <div class="pop-up-box small-6 large-centered">
+            <a href="#" class="close-button">&#10006;</a>
+            <div class="mb-12">
+               <form
+                  action="${ pageContext.servletContext.contextPath }/hp/board/report"
+                  method="POST" id="reportForm" name="reportForm">
+                  <label for="title">신고사유</label> <select
+                     class="custom-select mr-sm-2" name="reportCategory"
+                     id="reportCategory" onchange="reportCategoryChanged(this.value)">
+                     <option value="def" selected>--</option>
+                     <option value="a1">욕설 및 부적절한 언어 사용</option>
+                     <option value="i2">광고성 게시글 작성</option>
+                     <option value="r3">음란물 업로드</option>
+                     <option value="s4">회원들간의 분쟁 조장</option>
+                     <option value="m5">기타</option>
+                  </select> <input type="hidden" value="${ requestScope.board.no }"
+                     id="reportBoardNo" name="reportBoardNo"> <input
+                     type="hidden" value="${ requestScope.board.categoryNo }"
+                     id="reportBoardCategory" name="reportBoardCategory"> <input
+                     type="hidden" value="${ sessionScope.loginMember.no }"
+                     id="reporterMemberNo" name="reporterMemberNo"> <input
+                     type="hidden" value="${ requestScope.board.memberNo }"
+                     id="reportWriterNo" name="reportWriterNo">
+                  <textarea class="form-control" rows="3" name="reportContent"
+                     id="reportContent" style="display: none;"
+                     placeholder="신고 사유를 입력해 주세요"></textarea>
+                  <button type="button" id="reportSubmitButton"
+                     class="gp-btn btn-primary" style="margin-top:180px;">신고접수</button>
+               </form>
+            </div>
+         </div>
+      </div>
+   </div>
 
 
 	<jsp:include page="/WEB-INF/views/common/footer.jsp"></jsp:include>
