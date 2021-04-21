@@ -43,24 +43,24 @@ table{text-align: center;}
 						<a
 							href="${ pageContext.servletContext.contextPath }/admin/book/List"
 							class="list-group-item text-center">
-							<span class="glyphicon glyphicon-pencil "> 예약관리</span> <br />
-						</a> <a href="${ pageContext.servletContext.contextPath} /admin/board"
+							<span class="glyphicon glyphicon-pencil "> 예약관리</span><br/>
+						</a> <a href="${ pageContext.servletContext.contextPath}/admin/board"
 							class="list-group-item text-center">
-							<span class="glyphicon glyphicon-pencil "> 관리자 게시판관리</span> <br />
+							<span class="glyphicon glyphicon-pencil "> 관리자 게시판관리</span><br/>
 						</a> 
 						<a
 							href="${ pageContext.servletContext.contextPath }/admin/nonAnswer/qna"
 							class="list-group-item text-center">
-							<span class="glyphicon glyphicon-pencil "> 미응답 Q&A관리</span> <br />
+							<span class="glyphicon glyphicon-pencil "> 미응답 Q&amp;A관리</span><br/>
 						</a>
 						<a
-							href="${ pageContext.servletContext.contextPath }/hp/report/count/list"
+							href="${ pageContext.servletContext.contextPath }/admin/member/list"
 							class="list-group-item text-center">
-							<span class="glyphicon glyphicon-pencil "> 회원관리</span> <br />
+							<span class="glyphicon glyphicon-pencil "> 회원관리</span><br/>
 						</a> <a
 							href="${ pageContext.servletContext.contextPath }/hp/report/count/list"
 							class="list-group-item text-center">
-							<span class="glyphicon glyphicon-pencil "> 신고관리</span> <br /> 
+							<span class="glyphicon glyphicon-pencil "> 신고관리</span><br/>
 						</a>
 					</div>
 				</div>

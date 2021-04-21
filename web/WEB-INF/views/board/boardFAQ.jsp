@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-<title>개편한 병원-FAQ</title>
+<title>개편한 병원-F&amp;Q</title>
 <style>
 html{background: #f8f8f8;}
 .title-sec {
