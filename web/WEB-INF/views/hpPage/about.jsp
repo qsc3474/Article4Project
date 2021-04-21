@@ -22,7 +22,7 @@
 				<div class="row">
 					<div class="col-md-6">
 						<div class="about-box wow fadeIn" data-wow-duration="1000ms" data-wow-delay="0.3s">
-							<img src="${ pageContext.servletContext.contextPath }/resources/media/img/doctor01.jpg">
+							<img src="${ pageContext.servletContext.contextPath }/resources/media/img/doctor07.jpg">
 						</div>
 					</div>
 
