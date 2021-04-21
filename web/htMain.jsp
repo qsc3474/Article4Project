@@ -279,7 +279,7 @@
 									<a href="${ pageContext.servletContext.contextPath }/ht/NTC/notice/list"> <img
 										src="${ pageContext.servletContext.contextPath }/resources/media/img/cat11.jpg"
 										alt="Blog thumb">
-									</a> <a href="pet-info.html" class="date">공지<br>사항
+									</a> <a href="${ pageContext.servletContext.contextPath }/ht/NTC/notice/list" class="date">공지<br>사항
 									</a>
 								</div>
 							</div>

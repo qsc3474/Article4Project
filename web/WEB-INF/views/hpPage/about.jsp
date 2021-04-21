@@ -80,7 +80,7 @@
 						<div class="col-md-3">
 							<div class="team-member wow fadeInRight" data-wow-delay="0.5s">
 								<div class="member-thumb">
-									<img src="${ pageContext.servletContext.contextPath }/resources/media/img/doctor02.jpg" alt="profile Pic">
+									<img src="${ pageContext.servletContext.contextPath }/resources/media/img/doctor06.jpg" alt="profile Pic">
 								</div>
 								<div class="team-details">
 									<h4 class="name">김성배</h4>
