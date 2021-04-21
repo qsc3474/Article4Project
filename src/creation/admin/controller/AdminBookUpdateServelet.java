@@ -36,7 +36,8 @@ public class AdminBookUpdateServelet extends HttpServlet {
 		path = "/WEB-INF/views/common/success.jsp";
 		request.setAttribute("successCode", "updateBook");
 	}else {
-		path="/WEB-INF/view/common/failed.jsp";
+		path="/WEB-INF/views/common/adminFailed.jsp";
+		request.setAttribute("message", "예약 수정에 실패하셨습니다.");
 	}
 	
 	request.getRequestDispatcher(path).forward(request, response);
