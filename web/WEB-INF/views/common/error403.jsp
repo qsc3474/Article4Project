@@ -16,7 +16,7 @@
             position: absolute;
             top: 50%;
             left: 50%;
-            margin: -180px 0 0 -180px;
+            margin: -180px 0 0 -280px;
         }
 
         .errorWrap img {
@@ -24,7 +24,7 @@
             max-height: 100%;
         }
         .ht-title {margin-top: 30px;}
-        .bt{margin-top: 330px;}
+        .bt{margin-top: 500px;}
     </style>
 </head>
 <body>

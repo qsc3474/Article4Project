@@ -230,9 +230,7 @@ thead {
 						</div><!-- /row -->
 					</div><!-- page-inner -->
 				</div>
-				<c:if test="${ sessionScope.loginMember.kind eq 'M'}">
-				<button id="writeNotice" class="gp-btn btn-dark" style="padding:7px 15px;">작성하기</button>
-			</c:if>
+				
 
 			<!-- 검색 폼 -->
 			<form id="searchForm" class="text-center" action="${ pageContext.servletContext.contextPath }/ht/NTC/notice/search" method="get" 
@@ -261,6 +259,9 @@ thead {
 						</c:otherwise>
 					</c:choose>
 					<button type="submit" class="gp-btn btn-dark" style="padding:7px 15px;">검색하기</button>
+					<c:if test="${ sessionScope.loginMember.kind eq 'M'}">
+				<button id="writeNotice" class="gp-btn btn-dark" style="padding:7px 15px;">작성하기</button>
+			</c:if>
 				</div>
 			</form>
 			</div>

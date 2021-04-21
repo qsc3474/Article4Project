@@ -276,7 +276,7 @@
 							<div class="blog-post wow fadeInRight" data-wow-delay="0.9s">
 
 								<div class="blog-thumb">
-									<a href="team.html"> <img
+									<a href="${ pageContext.servletContext.contextPath }/ht/NTC/notice/list"> <img
 										src="${ pageContext.servletContext.contextPath }/resources/media/img/cat11.jpg"
 										alt="Blog thumb">
 									</a> <a href="pet-info.html" class="date">공지<br>사항

@@ -64,7 +64,7 @@
 						<div class="col-md-3">
 							<div class="team-member wow fadeInRight" data-wow-delay="0.5s">
 								<div class="member-thumb">
-									<img src="${ pageContext.servletContext.contextPath }/resources/media/img/dog15.jpg" alt="profile Pic">
+									<img src="${ pageContext.servletContext.contextPath }/resources/media/img/doctor01.jpg" alt="profile Pic">
 								</div>
 								<div class="team-details">
 									<h4 class="name">전인애</h4>
@@ -80,10 +80,10 @@
 						<div class="col-md-3">
 							<div class="team-member wow fadeInRight" data-wow-delay="0.5s">
 								<div class="member-thumb">
-									<img src="${ pageContext.servletContext.contextPath }/resources/media/img/dog15.jpg" alt="profile Pic">
+									<img src="${ pageContext.servletContext.contextPath }/resources/media/img/doctor02.jpg" alt="profile Pic">
 								</div>
 								<div class="team-details">
-									<h4 class="name">전인애</h4>
+									<h4 class="name">김성배</h4>
 									<span class="position">내과전문의</span>
 
 									<p>
@@ -96,10 +96,10 @@
 						<div class="col-md-3">
 							<div class="team-member wow fadeInRight" data-wow-delay="0.5s">
 								<div class="member-thumb">
-									<img src="${ pageContext.servletContext.contextPath }/resources/media/img/dog15.jpg" alt="profile Pic">
+									<img src="${ pageContext.servletContext.contextPath }/resources/media/img/doctor03.jpg" alt="profile Pic">
 								</div>
 								<div class="team-details">
-									<h4 class="name">전인애</h4>
+									<h4 class="name">노성준</h4>
 									<span class="position">내과전문의</span>
 
 									<p>
@@ -112,10 +112,10 @@
 						<div class="col-md-3">
 							<div class="team-member wow fadeInRight" data-wow-delay="0.5s">
 								<div class="member-thumb">
-									<img src="${ pageContext.servletContext.contextPath }/resources/media/img/dog15.jpg" alt="profile Pic">
+									<img src="${ pageContext.servletContext.contextPath }/resources/media/img/doctor05.jpg" alt="profile Pic">
 								</div>
 								<div class="team-details">
-									<h4 class="name">전인애</h4>
+									<h4 class="name">최혁진</h4>
 									<span class="position">내과전문의</span>
 
 									<p>
@@ -149,10 +149,7 @@
 								<a href="#" data-filter="*">all</a>
 							</li>
 							<li>
-								<a href="#" data-filter=".design">입원실</a>
-							</li>
-							<li>
-								<a href="#" data-filter=".branding">재할치료실</a>
+								<a href="#" data-filter=".prod">장비</a>
 							</li>
 							<li>
 								<a href="#" data-filter=".ui">처치실</a>
@@ -166,32 +163,47 @@
 								<li class="grid-sizer"></li>
 								<li class="gp-portfolio-item gredient grid-item ui logo branding" style="position: absolute; left: 0%; top: 0px;">
 									<div class="gp-isotope-grid__img effect-active">
-										<img src="${ pageContext.servletContext.contextPath }/resources/media/img/puppy01.jpg" alt="portfolio thumb">
+										<img src="${ pageContext.servletContext.contextPath }/resources/media/img/01.jpg" alt="portfolio thumb">
 									</div>
 								</li>
 								<li class="gp-portfolio-item gredient grid-item ui design" style="position: absolute; left: 49.9165%; top: 0px;">
 									<div class="gp-isotope-grid__img">
-										<img src="${ pageContext.servletContext.contextPath }/resources/media/img/puppy02.jpg" alt="portfolio thumb">
+										<img src="${ pageContext.servletContext.contextPath }/resources/media/img/02.jpg" alt="portfolio thumb">
 									</div>
 								</li>
 								<li class="gp-portfolio-item gredient grid-item logo" style="position: absolute; left: 0%; top: 299px;">
 									<div class="gp-isotope-grid__img">
-										<img src="${ pageContext.servletContext.contextPath }/resources/media/img/dog15.jpg" alt="portfolio thumb">
+										<img src="${ pageContext.servletContext.contextPath }/resources/media/img/03.jpg" alt="portfolio thumb">
 									</div>
 								</li>
 								<li class="gp-portfolio-item gredient grid-item design ui" style="position: absolute; left: 49.9165%; top: 299px;">
 									<div class="gp-isotope-grid__img">
-										<img src="${ pageContext.servletContext.contextPath }/resources/media/img/cat06.jpg" alt="portfolio thumb">
+										<img src="${ pageContext.servletContext.contextPath }/resources/media/img/04.jpg" alt="portfolio thumb">
 									</div>
 								</li>
 								<li class="gp-portfolio-item gredient grid-item design ui" style="position: absolute; left: 0%; top: 599px;">
 									<div class="gp-isotope-grid__img">
-										<img src="${ pageContext.servletContext.contextPath }/resources/media/img/puppy02.jpg" alt="portfolio thumb">
+										<img src="${ pageContext.servletContext.contextPath }/resources/media/img/05.jpg" alt="portfolio thumb">
 									</div>
 								</li>
 								<li class="gp-portfolio-item gredient grid-item design" style="position: absolute; left: 49.9165%; top: 599px;">
 									<div class="gp-isotope-grid__img">
-										<img src="${ pageContext.servletContext.contextPath }/resources/media/img/puppy02.jpg" alt="portfolio thumb">
+										<img src="${ pageContext.servletContext.contextPath }/resources/media/img/affiniti.jpg" alt="portfolio thumb">
+									</div>
+								</li>
+								<li class="gp-portfolio-item gredient grid-item design ui" style="position: absolute; left: 49.9165%; top: 299px;">
+									<div class="gp-isotope-grid__img">
+										<img src="${ pageContext.servletContext.contextPath }/resources/media/img/c-arm.jpg" alt="portfolio thumb">
+									</div>
+								</li>
+								<li class="gp-portfolio-item gredient grid-item design ui" style="position: absolute; left: 0%; top: 599px;">
+									<div class="gp-isotope-grid__img">
+										<img src="${ pageContext.servletContext.contextPath }/resources/media/img/c-arm.jpg" alt="portfolio thumb">
+									</div>
+								</li>
+								<li class="gp-portfolio-item gredient grid-item design" style="position: absolute; left: 49.9165%; top: 599px;">
+									<div class="gp-isotope-grid__img">
+										<img src="${ pageContext.servletContext.contextPath }/resources/media/img/affiniti.jpg" alt="portfolio thumb">
 									</div>
 								</li>
 							</ul>

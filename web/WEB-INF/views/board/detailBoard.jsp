@@ -128,7 +128,15 @@ tbody {
 				<div class="row coments-row">
 					게시글 상세조회
 					<table class="table table-bordered">
-						<colgroup></colgroup>
+						<colgroup>
+						<col width="10%">
+                        <col>
+                        <col>
+                        <col>
+                        <col>
+                        <col>
+				
+						</colgroup>
 						<tbody>
 							<tr>
 								<th scope="row">제목</th>
@@ -230,7 +238,7 @@ tbody {
 	<div id="pop-up">
 		<div class="pop" id="reply-pop-up">
 			<div class="pop-up-box small-6 large-centered">
-				<a href="#" class="reply-close-button close-button">&#10006;</a>
+				<a href="#" class="reply-close-button">&#10006;</a>
 				<h3 style="margin-bottom: 0">댓글내용</h3>
 				<table class="table table-bordered" style="background: #fff">
 					<tbody>
@@ -253,9 +261,9 @@ tbody {
 	</div>
 	<!-- 신고 팝업창 -->
 	<div id="pop-up">
-		<div class="pop" id="report-pop-up">
+		<div class="pop" id="report-pop-up" style="border: 1px solid #ccc;">
 			<div class="pop-up-box small-6 large-centered">
-				<a href="#" class="report-close-button close-button">&#10006;</a>
+				<a href="#" class="report-close-button">&#10006;</a>
 				<div class="mb-12">
 					<form
 						action="${ pageContext.servletContext.contextPath }/hp/board/report"
@@ -281,7 +289,7 @@ tbody {
 							id="reportContent" style="display: none;"
 							placeholder="신고 사유를 입력해 주세요"></textarea>
 						<button type="button" id="reportSubmitButton"
-							class="gp-btn btn-primary">신고접수</button>
+							class="gp-btn btn-primary" style="margin-top:180px;">신고접수</button>
 					</form>
 				</div>
 			</div>
