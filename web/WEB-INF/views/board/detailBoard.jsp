@@ -196,7 +196,7 @@ tbody {
 
 			<div class="row">
 				<div id="comments">
-					<div class="releted-post">
+					<div class="releted-post" id="insertComment">
 						<p class="related-post-title">댓글달기</p>
 						<div class="row coments-row">
 							<table class="table table-bordered">
@@ -302,7 +302,18 @@ $(function(){  //페이지가 로드되면 댓글 데이터를 가져온다.
 		var comments = document.getElementById("comments");
 		comments.style.display = "none";
 		
+	} else if(${ sessionScope.loginMember == null}){
+		
+		var comments = document.getElementById("insertComment");
+		comments.style.display = "none";
+		
+	} else if("${ requestScope.board.categoryNo }" == "HP_QNA" && ("${ sessionScope.loginMember.kind }" != "M")){
+	
+		var comments = document.getElementById("insertComment");
+		comments.style.display = "none";
+		
 	}
+	
 });
 function deleteAndUpdateButtonAction(){
 	
